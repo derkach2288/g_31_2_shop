@@ -28,6 +28,10 @@ public class CommonCustomer implements Customer {
         return id;
     }
 
+    @Override
+    public void setId(int id) {
+        this.id = id;
+    }
 
     @Override
     public boolean isActive() {
@@ -46,6 +50,9 @@ public class CommonCustomer implements Customer {
         return cart;
     }
 
+    public void setCart(Cart cart) {
+        this.cart = cart;
+    }
 
     @Override
     public boolean equals(Object o) {

@@ -6,7 +6,6 @@ import java.util.List;
 
 public interface ProductRepository {
     Product save(Product product);
-
     List<Product> getAll();
     Product getById(int id);
     void update(Product product);
