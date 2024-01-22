@@ -1,12 +1,15 @@
 package de.aittr.g_31_2_shop.repositories;
 
 import de.aittr.g_31_2_shop.domain.CommonCart;
+import de.aittr.g_31_2_shop.domain.CommonCustomer;
+import de.aittr.g_31_2_shop.domain.CommonProduct;
 import de.aittr.g_31_2_shop.domain.interfaces.Customer;
 import de.aittr.g_31_2_shop.repositories.interfaces.CustomerRepository;
 import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
 
 import static de.aittr.g_31_2_shop.repositories.DBConnector.getConnection;
@@ -52,11 +55,30 @@ public class CommonCustomerRepository implements CustomerRepository {
     public List<Customer> getAll() {
         try (Connection connection = getConnection()) {
 
+            String query = "SELECT c.id AS customer_id, c.name AS customer_name, cart.id AS cart_id, p.id AS product_id, " +
+                    "p.name AS product_name, p.price AS product_price FROM customer c JOIN cart ON " +
+                    "c.id = cart.customer_id JOIN cart_product cp ON cart.id = cp.cart_id JOIN product p ON " +
+                    "cp.product_id = p.id WHERE c.is_active = '1' AND p.is_active = '1';";
+            ResultSet resultSet = connection.createStatement().executeQuery(query);
+            List<Customer> customers = new ArrayList<>();
+
+            while (resultSet.next()) {
+                int customer_id = resultSet.getInt("customer_id");
+                String customer_name = resultSet.getString("customer_name");
+                int cart_id = resultSet.getInt("cart_id");
+                int product_id = resultSet.getInt("product_id");
+                String product_name = resultSet.getString("product_name");
+                double product_price = resultSet.getDouble("product_price");
+
+                Customer customer = new CommonCustomer(customer_id, true, customer_name, new CommonCart(cart_id, List.of(new CommonProduct(product_id, true, product_name, product_price))));
+                customers.add(customer);
+            }
+
+            return customers;
+
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
-        return null;
     }
 
     @Override
