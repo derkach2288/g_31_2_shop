@@ -1,7 +1,6 @@
 package de.aittr.g_31_2_shop.services.jpa;
 
 import de.aittr.g_31_2_shop.domain.dto.ProductDto;
-import de.aittr.g_31_2_shop.domain.interfaces.Product;
 import de.aittr.g_31_2_shop.domain.jpa.JpaProduct;
 import de.aittr.g_31_2_shop.repositories.jpa.JpaProductRepository;
 import de.aittr.g_31_2_shop.services.interfaces.ProductService;
@@ -32,46 +31,59 @@ public class JpaProductService implements ProductService {
 
     @Override
     public List<ProductDto> getAllActiveProducts() {
-        return null;
+        return repository.findAllByIsActiveTrue()
+                .stream()
+                .map(p -> mappingService.mapProductEntityToDto(p))
+                .toList();
     }
 
     @Override
     public ProductDto getActiveProductById(int id) {
-        return null;
+        JpaProduct productById = repository.findByIdAndIsActiveTrue(id);
+
+        if (productById != null) {
+            return mappingService.mapProductEntityToDto(productById);
+        } else {
+            return null;
+        }
+
     }
 
     @Override
     public void update(ProductDto product) {
-
+        JpaProduct updateJpaProduct = mappingService.mapDtoToJpaProduct(product);
+        repository.updateProduct(updateJpaProduct);
     }
 
     @Override
     public void deleteById(int id) {
-
+        repository.setIsActiveFalseById(id);
     }
 
     @Override
     public void deleteByName(String name) {
-
+        repository.deleteByName(name);
     }
 
     @Override
     public void restoreById(int id) {
-
+        repository.restoreById(id);
     }
 
     @Override
     public int getActiveProductCount() {
-        return 0;
+//        return getAllActiveProducts().size();
+        return repository.countFindAllByIsActiveTrue();
     }
 
     @Override
     public double getActiveProductTotalPrice() {
-        return 0;
+//        return repository.findAllByIsActiveTrue().stream().mapToDouble(p -> p.getPrice()).sum();
+        return repository.getActiveProductTotalPrice();
     }
 
     @Override
     public double getActiveProductAveragePrice() {
-        return 0;
+        return repository.getActiveProductAveragePrice();
     }
 }
