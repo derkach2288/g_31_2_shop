@@ -1,6 +1,6 @@
 package de.aittr.g_31_2_shop.controllers;
 
-import de.aittr.g_31_2_shop.domain.CommonCustomer;
+import de.aittr.g_31_2_shop.domain.jdbc.CommonCustomer;
 import de.aittr.g_31_2_shop.domain.interfaces.Customer;
 import de.aittr.g_31_2_shop.services.interfaces.CustomerService;
 import org.springframework.web.bind.annotation.*;
@@ -22,7 +22,7 @@ public class CustomerController {
     }
 
     @GetMapping
-    public List<Customer> getAllActiveCustomers() {
-        return service.getAllActiveCustomer();
+    public List<Customer> getAll() {
+        return service.getAllActiveCustomers();
     }
 }

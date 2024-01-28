@@ -1,27 +1,27 @@
-package de.aittr.g_31_2_shop.domain;
+package de.aittr.g_31_2_shop.domain.jdbc;
 
-import de.aittr.g_31_2_shop.domain.interfaces.Cart;
-import de.aittr.g_31_2_shop.domain.interfaces.Customer;
+import de.aittr.g_31_2_shop.domain.interfaces.Product;
 
 import java.util.Objects;
 
-public class CommonCustomer implements Customer {
+public class CommonProduct implements Product {
 
     private int id;
     private boolean isActive;
     private String name;
-    private Cart cart;
+    private double price;
 
-    public CommonCustomer() {
-        this.isActive = true;
+    public CommonProduct() {
+        isActive = true;
     }
 
-    public CommonCustomer(int id, boolean isActive, String name, Cart cart) {
+    public CommonProduct(int id, boolean isActive, String name, double price) {
         this.id = id;
         this.isActive = isActive;
         this.name = name;
-        this.cart = cart;
+        this.price = price;
     }
+
 
     @Override
     public int getId() {
@@ -33,25 +33,20 @@ public class CommonCustomer implements Customer {
         this.id = id;
     }
 
+
     @Override
     public boolean isActive() {
         return isActive;
     }
-
 
     @Override
     public String getName() {
         return name;
     }
 
-
     @Override
-    public Cart getCart() {
-        return cart;
-    }
-
-    public void setCart(Cart cart) {
-        this.cart = cart;
+    public double getPrice() {
+        return price;
     }
 
     @Override
@@ -59,26 +54,29 @@ public class CommonCustomer implements Customer {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        CommonCustomer that = (CommonCustomer) o;
+        CommonProduct that = (CommonProduct) o;
 
         if (id != that.id) return false;
         if (isActive != that.isActive) return false;
-        if (!Objects.equals(name, that.name)) return false;
-        return Objects.equals(cart, that.cart);
+        if (Double.compare(that.price, price) != 0) return false;
+        return Objects.equals(name, that.name);
     }
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result;
+        long temp;
+        result = id;
         result = 31 * result + (isActive ? 1 : 0);
         result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (cart != null ? cart.hashCode() : 0);
+        temp = Double.doubleToLongBits(price);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
     }
 
     @Override
     public String toString() {
-        return String.format("Покупатель: ИД - %d, имя - %s, активен - %s, содержимое корзины:%n%s",
-                id, name, isActive ? "да" : "нет", cart);
+        return String.format("ИД - %d, наименование - %s, цена - %.2f, активен - %s.",
+               id, name, price, isActive ? "да" : "нет");
     }
 }

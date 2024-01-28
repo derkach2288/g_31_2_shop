@@ -1,6 +1,6 @@
-package de.aittr.g_31_2_shop.repositories;
+package de.aittr.g_31_2_shop.repositories.jdbc;
 
-import de.aittr.g_31_2_shop.domain.CommonProduct;
+import de.aittr.g_31_2_shop.domain.jdbc.CommonProduct;
 import de.aittr.g_31_2_shop.domain.interfaces.Product;
 import de.aittr.g_31_2_shop.repositories.interfaces.ProductRepository;
 import org.springframework.stereotype.Repository;
@@ -15,7 +15,7 @@ import java.util.Locale;
 //2. Реализовать сохранение в БД нового покупателя. Для каждого покупателя в БД сразу же должна сохраняться его корзина.
 //3. *** Реализовать возврат всех активных покупателей. При этом корзины покупателей должны быть наполнены активными продуктами, которые эти покупатели добавляли в корзины.
 
-import static de.aittr.g_31_2_shop.repositories.DBConnector.getConnection;
+import static de.aittr.g_31_2_shop.repositories.jdbc.DBConnector.getConnection;
 
 @Repository
 public class CommonProductRepository implements ProductRepository {

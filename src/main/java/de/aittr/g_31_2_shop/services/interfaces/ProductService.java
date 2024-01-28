@@ -1,18 +1,18 @@
 package de.aittr.g_31_2_shop.services.interfaces;
 
-import de.aittr.g_31_2_shop.domain.interfaces.Product;
+import de.aittr.g_31_2_shop.domain.dto.ProductDto;
 
 import java.util.List;
 
 public interface ProductService {
 
-    Product save(Product product);
+    ProductDto save(ProductDto product);
 
-    List<Product> getAllActiveProducts();
+    List<ProductDto> getAllActiveProducts();
 
-    Product getActiveProductById(int id);
+    ProductDto getActiveProductById(int id);
 
-    void update(Product product);
+    void update(ProductDto product);
 
     void deleteById(int id);
 
