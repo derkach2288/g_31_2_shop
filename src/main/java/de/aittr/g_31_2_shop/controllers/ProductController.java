@@ -1,7 +1,11 @@
 package de.aittr.g_31_2_shop.controllers;
 
 import de.aittr.g_31_2_shop.domain.dto.ProductDto;
+import de.aittr.g_31_2_shop.exception_handling.Response;
+import de.aittr.g_31_2_shop.exception_handling.exceptions.FirstTestException;
 import de.aittr.g_31_2_shop.services.interfaces.ProductService;
+import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,7 +21,7 @@ public class ProductController {
     }
 
     @PostMapping
-    public ProductDto save(@RequestBody ProductDto product) {
+    public ProductDto save(@Valid @RequestBody ProductDto product) {
         return service.save(product);
     }
 
@@ -32,23 +36,32 @@ public class ProductController {
     }
 
 
-    @PutMapping("/{id}")
-    public void update(@PathVariable int id, @RequestBody ProductDto product) {
-        product.setId(id);
+    @PutMapping
+    public void update(@RequestBody ProductDto product) {
         service.update(product);
     }
+//    @PutMapping("/{id}")
+//    public void update(@PathVariable int id, @RequestBody ProductDto product) {
+//        product.setId(id);
+//        service.update(product);
+//    }
 
-    @PutMapping("/delete/id/{id}")
+//    @PutMapping("/delete/id/{id}")
+//    public void deleteById(@PathVariable int id) {
+//        service.deleteById(id);
+//    }
+    @DeleteMapping("/{id}")
     public void deleteById(@PathVariable int id) {
         service.deleteById(id);
     }
 
-    @PutMapping("/delete/name/{name}")
+
+    @DeleteMapping("/del_by_name/{name}")
     public void deleteByName(@PathVariable String name) {
         service.deleteByName(name);
     }
 
-    @PutMapping("/restore/{id}")
+    @PutMapping("/{id}")
     public void restoreById(@PathVariable int id) {
         service.restoreById(id);
     }
@@ -66,5 +79,12 @@ public class ProductController {
         return service.getActiveProductAveragePrice();
     }
 
-
+    // 1 способ - создание метода-обработчика в контроллере, где мы ожидаем ошибки
+    // Минус - если в разных контроллерах требуется обрабатывать одинаково - придется написать один и тот же обработчик в разных контроллерах
+    // Плюс - если в разных контроллерах нужно обрабатывать ошибки по разному - как раз мы можем это сделать
+    @ExceptionHandler(FirstTestException.class)
+    @ResponseStatus(HttpStatus.I_AM_A_TEAPOT) // BAD_REQUEST
+    public Response handleException(FirstTestException e) {
+        return new Response(e.getMessage());
+    }
 }

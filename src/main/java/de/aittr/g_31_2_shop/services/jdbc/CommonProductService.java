@@ -21,7 +21,13 @@ public class CommonProductService implements ProductService {
 
     @Override
     public ProductDto save(ProductDto product) {
+        if (product.getPrice() <= 0) {
+            // выбрасываем ошибку, что цена некорппектна
+        }
 
+        if (product.getName() == null || product.getName().isEmpty()) {
+            // выбрасываем ошибку, что наименование некорппектно
+        }
         CommonProduct commonProduct = mappingService.mapDtoToCommonProduct(product);
         Product saveProduct = repository.save(commonProduct);
         return mappingService.mapProductEntityToDto(saveProduct);

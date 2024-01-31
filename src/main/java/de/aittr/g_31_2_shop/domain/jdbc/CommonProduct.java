@@ -40,6 +40,11 @@ public class CommonProduct implements Product {
     }
 
     @Override
+    public void setActive(boolean active) {
+        isActive = active;
+    }
+
+    @Override
     public String getName() {
         return name;
     }

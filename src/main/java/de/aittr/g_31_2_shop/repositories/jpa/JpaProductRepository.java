@@ -15,11 +15,6 @@ public interface JpaProductRepository extends JpaRepository<JpaProduct, Integer>
     List<JpaProduct> findAllByIsActiveTrue();
     @Transactional
     JpaProduct findByIdAndIsActiveTrue(int id);
-//    @Transactional
-//    void deleteByName(String name);
-//    @Transactional
-//    void updateProduct(JpaProduct product);
-
     @Transactional
     @Modifying
     @Query(value = "UPDATE product SET name = :#{#product.name}, price = :#{#product.price}, is_active = :#{#product.isActive} WHERE id = :#{#product.id}", nativeQuery = true)
@@ -28,6 +23,8 @@ public interface JpaProductRepository extends JpaRepository<JpaProduct, Integer>
     @Modifying
     @Query(value = "UPDATE product SET is_active = 0 WHERE id = :id", nativeQuery = true)
     void setIsActiveFalseById(@Param("id") int id);
+
+    JpaProduct findByName(String name);
     @Transactional
     @Modifying
     @Query(value = "UPDATE product SET is_active = 0 WHERE name = :name", nativeQuery = true)
