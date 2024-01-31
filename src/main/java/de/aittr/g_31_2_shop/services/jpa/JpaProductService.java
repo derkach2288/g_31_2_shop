@@ -3,10 +3,7 @@ package de.aittr.g_31_2_shop.services.jpa;
 import de.aittr.g_31_2_shop.domain.dto.ProductDto;
 import de.aittr.g_31_2_shop.domain.interfaces.Product;
 import de.aittr.g_31_2_shop.domain.jpa.JpaProduct;
-import de.aittr.g_31_2_shop.exception_handling.exceptions.FirstTestException;
-import de.aittr.g_31_2_shop.exception_handling.exceptions.FourthTestException;
-import de.aittr.g_31_2_shop.exception_handling.exceptions.SecondTestException;
-import de.aittr.g_31_2_shop.exception_handling.exceptions.ThirdTestException;
+import de.aittr.g_31_2_shop.exception_handling.exceptions.*;
 import de.aittr.g_31_2_shop.repositories.jpa.JpaProductRepository;
 import de.aittr.g_31_2_shop.services.interfaces.ProductService;
 import de.aittr.g_31_2_shop.services.mapping.ProductMappingService;
@@ -35,7 +32,7 @@ public class JpaProductService implements ProductService {
             entity = repository.save(entity);
             return mappingService.mapProductEntityToDto(entity);
         } catch (Exception e) {
-            throw new FourthTestException(e.getMessage());
+            throw new ProductValidationException("Ошибка валидации продукта: " + e.getMessage());
         }
     }
 
@@ -59,7 +56,8 @@ public class JpaProductService implements ProductService {
         if (product != null && product.isActive()){
             return mappingService.mapProductEntityToDto(product);
         }
-        throw new ThirdTestException("Продукт с указанным идентификатором в отстутсвует в базе данных");
+        throw new ProductNotFoundException("Продукт с указанным идентификатором отстутсвует в базе данных");
+
 
 
 //        JpaProduct productById = repository.findByIdAndIsActiveTrue(id);
@@ -74,8 +72,13 @@ public class JpaProductService implements ProductService {
 
     @Override
     public void update(ProductDto dto) {
-        JpaProduct entity = mappingService.mapDtoToJpaProduct(dto);
-        repository.save(entity);
+
+        try {
+            JpaProduct entity = mappingService.mapDtoToJpaProduct(dto);
+            repository.save(entity);
+        } catch (Exception e) {
+            throw new ProductUpdateException("Ошибка при обновлении продукта: " + e.getMessage());
+        }
 
 //        JpaProduct updateJpaProduct = mappingService.mapDtoToJpaProduct(dto);
 //        repository.updateProduct(updateJpaProduct);
@@ -89,6 +92,9 @@ public class JpaProductService implements ProductService {
         if (product !=null && product.isActive()){
             product.setActive(false);
         }
+        throw new ProductNotFoundException("Продукт с указанным идентификатором отстутсвует в базе данных или уже неактивен");
+
+
 
 //        repository.setIsActiveFalseById(id);
     }
@@ -102,6 +108,7 @@ public class JpaProductService implements ProductService {
         if (product !=null && product.isActive()){
             product.setActive(false);
         }
+        throw new ProductNotFoundException("Продукт с указанным именем отстутсвует в базе данных или уже неактивен");
 
 
 //        repository.deleteByName(name);
@@ -116,23 +123,40 @@ public class JpaProductService implements ProductService {
             product.setActive(true);
         }
 
+        throw new ProductNotFoundException("Продукт с указанным идентификатором отстутсвует в базе данных или уже активен");
+
 //        repository.restoreById(id);
     }
 
     @Override
     public int getActiveProductCount() {
+        try {
 //        return getAllActiveProducts().size();
-        return repository.countFindAllByIsActiveTrue();
+            return repository.countFindAllByIsActiveTrue();
+
+        } catch (Exception e) {
+            throw new ProductCountException("Ошибка при подсчете количества активных продуктов");
+        }
     }
 
     @Override
     public double getActiveProductTotalPrice() {
-//        return repository.findAllByIsActiveTrue().stream().mapToDouble(p -> p.getPrice()).sum();
-        return repository.getActiveProductTotalPrice();
+        try {
+            //        return repository.findAllByIsActiveTrue().stream().mapToDouble(p -> p.getPrice()).sum();
+            return repository.getActiveProductTotalPrice();
+        } catch (Exception e) {
+            throw new ProductPriceException("Ошибка при вычислении суммарной цены для активных продуктов");
+        }
     }
 
     @Override
     public double getActiveProductAveragePrice() {
-        return repository.getActiveProductAveragePrice();
+        try {
+            //        return repository.findAllByIsActiveTrue().stream().mapToDouble(p -> p.getPrice()).sum();
+            return repository.getActiveProductAveragePrice();
+        } catch (Exception e) {
+            throw new ProductPriceException("Ошибка при вычислении средней цены для активных продуктов");
+        }
+
     }
 }

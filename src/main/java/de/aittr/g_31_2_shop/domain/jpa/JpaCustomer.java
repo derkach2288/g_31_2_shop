@@ -17,6 +17,10 @@ public class JpaCustomer implements Customer {
     private boolean isActive;
     @Column(name = "name")
     private String name;
+//    @Column(name = "age")
+//    private int age;
+//    @Column(name = "email")
+//    private String email;
     @OneToOne(mappedBy = "customer") // имя поля в классе Cart (12 строка)
     private JpaCart cart;
 

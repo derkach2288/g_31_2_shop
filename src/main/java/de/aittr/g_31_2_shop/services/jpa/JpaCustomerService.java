@@ -26,7 +26,12 @@ public class JpaCustomerService implements CustomerService {
 
     @Override
     public List<CustomerDto> getAllActiveCustomers() {
-        return null;
+
+        return repository.findAll()
+                .stream()
+                .filter(c -> c.isActive())
+                .map(c -> mappingService.mapCustomerEntityToDto(c))
+                .toList();
     }
 
     @Override
