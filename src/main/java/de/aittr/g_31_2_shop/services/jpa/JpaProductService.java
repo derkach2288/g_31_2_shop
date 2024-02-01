@@ -55,8 +55,9 @@ public class JpaProductService implements ProductService {
 
         if (product != null && product.isActive()){
             return mappingService.mapProductEntityToDto(product);
+        } else {
+            throw new ProductNotFoundException("Продукт с указанным идентификатором отстутсвует в базе данных");
         }
-        throw new ProductNotFoundException("Продукт с указанным идентификатором отстутсвует в базе данных");
 
 
 
@@ -91,8 +92,9 @@ public class JpaProductService implements ProductService {
 
         if (product !=null && product.isActive()){
             product.setActive(false);
+        } else {
+            throw new ProductNotFoundException("Продукт с указанным идентификатором отстутсвует в базе данных или уже неактивен");
         }
-        throw new ProductNotFoundException("Продукт с указанным идентификатором отстутсвует в базе данных или уже неактивен");
 
 
 
@@ -107,8 +109,9 @@ public class JpaProductService implements ProductService {
 
         if (product !=null && product.isActive()){
             product.setActive(false);
+        } else {
+            throw new ProductNotFoundException("Продукт с указанным именем отстутсвует в базе данных или уже неактивен");
         }
-        throw new ProductNotFoundException("Продукт с указанным именем отстутсвует в базе данных или уже неактивен");
 
 
 //        repository.deleteByName(name);
@@ -121,9 +124,10 @@ public class JpaProductService implements ProductService {
 
         if (product !=null && !product.isActive()){
             product.setActive(true);
+        } else {
+            throw new ProductNotFoundException("Продукт с указанным идентификатором отстутсвует в базе данных или уже активен");
         }
 
-        throw new ProductNotFoundException("Продукт с указанным идентификатором отстутсвует в базе данных или уже активен");
 
 //        repository.restoreById(id);
     }
