@@ -8,6 +8,10 @@ import de.aittr.g_31_2_shop.repositories.jpa.JpaProductRepository;
 import de.aittr.g_31_2_shop.services.interfaces.ProductService;
 import de.aittr.g_31_2_shop.services.mapping.ProductMappingService;
 import jakarta.transaction.Transactional;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,6 +21,11 @@ public class JpaProductService implements ProductService {
 
     private JpaProductRepository repository;
     private ProductMappingService mappingService;
+    //org.apache.logging.log4j.Level;
+//    private Logger logger = LogManager.getLogger(JpaProductService.class);
+
+    //org.slf4j.Logger;
+    private Logger logger = LoggerFactory.getLogger(JpaProductService.class);
 
     public JpaProductService(JpaProductRepository repository, ProductMappingService mappingService) {
         this.repository = repository;
@@ -38,6 +47,7 @@ public class JpaProductService implements ProductService {
 
     @Override
     public List<ProductDto> getAllActiveProducts() {
+        // здесь будет JoinPoint, сюда будет внедрятся вспомолательный код
         return repository.findAll()
                 .stream()
                 .filter(p -> p.isActive())
@@ -51,13 +61,22 @@ public class JpaProductService implements ProductService {
 
     @Override
     public ProductDto getActiveProductById(int id) {
+
+//        logger.log(Level.INFO, String.format("Запрошен продукт с идендификатором %d.", id));
+//        logger.log(Level.WARN, String.format("Запрошен продукт с идендификатором %d.", id));
+//        logger.log(Level.ERROR, String.format("Запрошен продукт с идендификатором %d.", id));
+
+//        logger.info(String.format("Запрошен продукт с идендификатором %d.", id));
+//        logger.warn(String.format("Запрошен продукт с идендификатором %d.", id));
+//        logger.error(String.format("Запрошен продукт с идендификатором %d.", id));
+
+
         Product product = repository.findById(id).orElse(null);
 
-        if (product != null && product.isActive()){
+        if (product != null && product.isActive()) {
             return mappingService.mapProductEntityToDto(product);
         }
         throw new ProductNotFoundException("Продукт с указанным идентификатором отстутсвует в базе данных");
-
 
 
 //        JpaProduct productById = repository.findByIdAndIsActiveTrue(id);
@@ -89,11 +108,11 @@ public class JpaProductService implements ProductService {
     public void deleteById(int id) {
         Product product = repository.findById(id).orElse(null);
 
-        if (product !=null && product.isActive()){
+        if (product != null && product.isActive()) {
             product.setActive(false);
+        } else {
+            throw new ProductNotFoundException("Продукт с указанным идентификатором отстутсвует в базе данных или уже неактивен");
         }
-        throw new ProductNotFoundException("Продукт с указанным идентификатором отстутсвует в базе данных или уже неактивен");
-
 
 
 //        repository.setIsActiveFalseById(id);
@@ -105,10 +124,11 @@ public class JpaProductService implements ProductService {
     public void deleteByName(String name) {
         Product product = repository.findByName(name);
 
-        if (product !=null && product.isActive()){
+        if (product != null && product.isActive()) {
             product.setActive(false);
+        } else {
+            throw new ProductNotFoundException("Продукт с указанным именем отстутсвует в базе данных или уже неактивен");
         }
-        throw new ProductNotFoundException("Продукт с указанным именем отстутсвует в базе данных или уже неактивен");
 
 
 //        repository.deleteByName(name);
@@ -119,11 +139,14 @@ public class JpaProductService implements ProductService {
     public void restoreById(int id) {
         Product product = repository.findById(id).orElse(null);
 
-        if (product !=null && !product.isActive()){
+        if (product != null && !product.isActive()) {
             product.setActive(true);
-        }
+            System.out.println("***");
 
-        throw new ProductNotFoundException("Продукт с указанным идентификатором отстутсвует в базе данных или уже активен");
+        } else {
+            throw new ProductNotFoundException("Продукт с указанным идентификатором отстутсвует в базе данных или уже активен");
+
+        }
 
 //        repository.restoreById(id);
     }
