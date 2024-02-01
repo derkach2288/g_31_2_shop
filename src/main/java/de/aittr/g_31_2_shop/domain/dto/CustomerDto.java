@@ -7,11 +7,22 @@ import java.util.Objects;
 public class CustomerDto {
     private int id;
     private String name;
+    private int age;
+    private String email;
+
     private CartDto cart;
 
-    public CustomerDto(int id, String name, CartDto cart) {
+//    public CustomerDto(int id, String name, CartDto cart) {
+//        this.id = id;
+//        this.name = name;
+//        this.cart = cart;
+//    }
+
+    public CustomerDto(int id, String name, int age, String email, CartDto cart) {
         this.id = id;
         this.name = name;
+        this.age = age;
+        this.email = email;
         this.cart = cart;
     }
 
@@ -21,6 +32,14 @@ public class CustomerDto {
 
     public String getName() {
         return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getEmail() {
+        return email;
     }
 
     public CartDto getCart() {

@@ -3,6 +3,10 @@ package de.aittr.g_31_2_shop.domain.jpa;
 import de.aittr.g_31_2_shop.domain.interfaces.Cart;
 import de.aittr.g_31_2_shop.domain.interfaces.Customer;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 
 import java.util.Objects;
 
@@ -16,21 +20,33 @@ public class JpaCustomer implements Customer {
     @Column(name = "is_Active")
     private boolean isActive;
     @Column(name = "name")
+    @Pattern(regexp = "[A-Z][a-z]{2,}")
     private String name;
-//    @Column(name = "age")
-//    private int age;
-//    @Column(name = "email")
-//    private String email;
-    @OneToOne(mappedBy = "customer") // имя поля в классе Cart (12 строка)
+    @Column(name = "age")
+    @Min(0)
+    private int age;
+    @Column(name = "email")
+    @Email
+    private String email;
+    @OneToOne(mappedBy = "customer") // имя поля в классе Cart (28 строка)
     private JpaCart cart;
 
     public JpaCustomer() {
     }
 
-    public JpaCustomer(int id, boolean isActive, String name, JpaCart cart) {
+//    public JpaCustomer(int id, boolean isActive, String name, JpaCart cart) {
+//        this.id = id;
+//        this.isActive = isActive;
+//        this.name = name;
+//        this.cart = cart;
+//    }
+
+    public JpaCustomer(int id, boolean isActive, String name, int age, String email, JpaCart cart) {
         this.id = id;
         this.isActive = isActive;
         this.name = name;
+        this.age = age;
+        this.email = email;
         this.cart = cart;
     }
 
@@ -52,6 +68,26 @@ public class JpaCustomer implements Customer {
     @Override
     public void setActive(boolean active) {
         isActive = active;
+    }
+
+    @Override
+    public int getAge() {
+        return age;
+    }
+
+    @Override
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    @Override
+    public String getEmail() {
+        return email;
+    }
+
+    @Override
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @Override

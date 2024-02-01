@@ -7,6 +7,10 @@ public interface Customer {
     void setActive(boolean isActive);
     String getName();
     void setName(String name);
+    int getAge();
+    void setAge(int age);
+    String getEmail();
+    void setEmail(String email);
     Cart getCart();
     void setCart(Cart cart);
 

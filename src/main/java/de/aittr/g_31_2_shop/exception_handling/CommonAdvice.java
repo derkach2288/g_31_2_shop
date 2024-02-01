@@ -50,4 +50,12 @@ public class CommonAdvice {
     }
 
 
+
+    @ExceptionHandler(CustomerValidationException.class)
+    public ResponseEntity<Response> handleException(CustomerValidationException e) {
+        Response response = new Response(e.getMessage());
+        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+    }
+
+
 }
