@@ -47,7 +47,7 @@ public class JpaProduct implements Product {
         this.price = price;
         this.isActive = isActive;
 
-        logger.info("Вызван конструктор с id={}, name={}, price={}, isActive={} ", id, name, price, isActive);
+        logger.info("Вызван конструктор JpaProduct с id={}, name={}, price={}, isActive={} ", id, name, price, isActive);
     }
 
     @Override
