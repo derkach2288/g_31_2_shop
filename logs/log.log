@@ -1315,3 +1315,326 @@ Caused by: org.hibernate.type.descriptor.java.spi.JdbcTypeRecommendationExceptio
 2024-02-05T17:05:03.168+01:00  INFO 97208 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-02-05T17:05:03.169+01:00  INFO 97208 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-02-05T17:05:03.175+01:00  INFO 97208 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-05T17:07:03.401+01:00  INFO 97419 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 20.0.2 with PID 97419 (/Users/admin/Documents/AIT_BACK/g_31_2_shop/target/classes started by admin in /Users/admin/Documents/AIT_BACK/g_31_2_shop)
+2024-02-05T17:07:03.404+01:00  INFO 97419 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-05T17:07:04.224+01:00  INFO 97419 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-05T17:07:04.292+01:00  INFO 97419 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 3 JPA repository interfaces.
+2024-02-05T17:07:05.037+01:00  INFO 97419 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-05T17:07:05.049+01:00  INFO 97419 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-05T17:07:05.050+01:00  INFO 97419 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-02-05T17:07:05.101+01:00  INFO 97419 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-05T17:07:05.102+01:00  INFO 97419 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1629 ms
+2024-02-05T17:07:05.275+01:00  INFO 97419 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-05T17:07:05.338+01:00  INFO 97419 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-05T17:07:05.371+01:00  INFO 97419 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-02-05T17:07:05.602+01:00  INFO 97419 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-05T17:07:05.626+01:00  INFO 97419 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-05T17:07:05.978+01:00  INFO 97419 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f9b8129
+2024-02-05T17:07:05.981+01:00  INFO 97419 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-05T17:07:06.887+01:00  INFO 97419 --- [main] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:07:07.045+01:00  INFO 97419 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-05T17:07:07.048+01:00  INFO 97419 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-05T17:07:07.416+01:00  INFO 97419 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-05T17:07:07.608+01:00  WARN 97419 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-05T17:07:07.991+01:00  INFO 97419 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-05T17:07:08.001+01:00  INFO 97419 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 5.162 seconds (process running for 5.616)
+2024-02-05T17:07:30.524+01:00  INFO 97419 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-05T17:07:30.525+01:00  INFO 97419 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-05T17:07:30.526+01:00  INFO 97419 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-02-05T17:07:30.554+01:00  INFO 97419 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.logging.AspectLogging    : Вызван метод getActiveProductCount.
+2024-02-05T17:07:30.671+01:00  INFO 97419 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:07:30.679+01:00  INFO 97419 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:07:30.679+01:00  INFO 97419 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:07:30.680+01:00  INFO 97419 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:07:30.680+01:00  INFO 97419 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:07:30.680+01:00  INFO 97419 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:07:30.680+01:00  INFO 97419 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:07:30.681+01:00  INFO 97419 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:07:30.681+01:00  INFO 97419 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:07:30.688+01:00  INFO 97419 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод isActive
+2024-02-05T17:07:30.688+01:00  INFO 97419 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод isActive
+2024-02-05T17:07:30.688+01:00  INFO 97419 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод isActive
+2024-02-05T17:07:30.688+01:00  INFO 97419 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод isActive
+2024-02-05T17:07:30.688+01:00  INFO 97419 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод isActive
+2024-02-05T17:07:30.688+01:00  INFO 97419 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод isActive
+2024-02-05T17:07:30.689+01:00  INFO 97419 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод isActive
+2024-02-05T17:07:30.689+01:00  INFO 97419 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод isActive
+2024-02-05T17:07:30.689+01:00  INFO 97419 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод isActive
+2024-02-05T17:07:30.689+01:00  INFO 97419 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.logging.AspectLogging    : Метод getActiveProductCount отработал за 134 миллисекунд с результатом 8
+2024-02-05T17:07:30.689+01:00  INFO 97419 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.logging.AspectLogging    : Подменяем действительный результат своим значением - 500
+2024-02-05T17:18:16.932+01:00  INFO 97419 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-05T17:18:16.934+01:00  INFO 97419 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-05T17:18:16.940+01:00  INFO 97419 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-05T17:18:21.375+01:00  INFO 97512 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 20.0.2 with PID 97512 (/Users/admin/Documents/AIT_BACK/g_31_2_shop/target/classes started by admin in /Users/admin/Documents/AIT_BACK/g_31_2_shop)
+2024-02-05T17:18:21.378+01:00  INFO 97512 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-05T17:18:22.132+01:00  INFO 97512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-05T17:18:22.199+01:00  INFO 97512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 3 JPA repository interfaces.
+2024-02-05T17:18:22.840+01:00  INFO 97512 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-05T17:18:22.852+01:00  INFO 97512 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-05T17:18:22.853+01:00  INFO 97512 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-02-05T17:18:22.905+01:00  INFO 97512 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-05T17:18:22.905+01:00  INFO 97512 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1465 ms
+2024-02-05T17:18:23.059+01:00  INFO 97512 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-05T17:18:23.111+01:00  INFO 97512 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-05T17:18:23.145+01:00  INFO 97512 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-02-05T17:18:23.377+01:00  INFO 97512 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-05T17:18:23.404+01:00  INFO 97512 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-05T17:18:23.738+01:00  INFO 97512 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2a7bc16b
+2024-02-05T17:18:23.740+01:00  INFO 97512 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-05T17:18:24.597+01:00  INFO 97512 --- [main] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:18:24.619+01:00  INFO 97512 --- [main] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван пустой конструктор JpaCustomer
+2024-02-05T17:18:24.755+01:00  INFO 97512 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-05T17:18:24.758+01:00  INFO 97512 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-05T17:18:25.100+01:00  INFO 97512 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-05T17:18:25.263+01:00  WARN 97512 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-05T17:18:25.602+01:00  INFO 97512 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-05T17:18:25.612+01:00  INFO 97512 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 4.807 seconds (process running for 5.268)
+2024-02-05T17:22:26.449+01:00  INFO 97512 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-05T17:22:26.450+01:00  INFO 97512 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-05T17:22:26.451+01:00  INFO 97512 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-02-05T17:22:26.598+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван пустой конструктор JpaCustomer
+2024-02-05T17:22:26.622+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван пустой конструктор JpaCustomer
+2024-02-05T17:22:26.625+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван пустой конструктор JpaCustomer
+2024-02-05T17:22:26.627+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван пустой конструктор JpaCustomer
+2024-02-05T17:22:26.630+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван пустой конструктор JpaCustomer
+2024-02-05T17:22:26.632+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван пустой конструктор JpaCustomer
+2024-02-05T17:22:26.634+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван пустой конструктор JpaCustomer
+2024-02-05T17:22:26.636+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван пустой конструктор JpaCustomer
+2024-02-05T17:22:26.638+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван пустой конструктор JpaCustomer
+2024-02-05T17:22:26.640+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван пустой конструктор JpaCustomer
+2024-02-05T17:22:26.642+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван пустой конструктор JpaCustomer
+2024-02-05T17:22:26.648+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод isActive
+2024-02-05T17:22:26.649+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getId
+2024-02-05T17:22:26.649+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getName
+2024-02-05T17:22:26.649+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getAge
+2024-02-05T17:22:26.649+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getEmail
+2024-02-05T17:22:26.649+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getCart
+2024-02-05T17:22:26.654+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:22:26.657+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:22:26.658+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:22:26.659+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getId
+2024-02-05T17:22:26.659+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getName
+2024-02-05T17:22:26.660+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getPrice
+2024-02-05T17:22:26.660+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getId
+2024-02-05T17:22:26.660+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getName
+2024-02-05T17:22:26.660+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getPrice
+2024-02-05T17:22:26.660+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getId
+2024-02-05T17:22:26.660+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getName
+2024-02-05T17:22:26.660+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getPrice
+2024-02-05T17:22:26.661+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод isActive
+2024-02-05T17:22:26.661+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getId
+2024-02-05T17:22:26.661+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getName
+2024-02-05T17:22:26.661+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getAge
+2024-02-05T17:22:26.661+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getEmail
+2024-02-05T17:22:26.661+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getCart
+2024-02-05T17:22:26.663+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:22:26.664+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:22:26.664+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:22:26.665+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getId
+2024-02-05T17:22:26.665+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getName
+2024-02-05T17:22:26.665+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getPrice
+2024-02-05T17:22:26.665+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getId
+2024-02-05T17:22:26.665+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getName
+2024-02-05T17:22:26.665+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getPrice
+2024-02-05T17:22:26.665+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getId
+2024-02-05T17:22:26.666+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getName
+2024-02-05T17:22:26.666+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getPrice
+2024-02-05T17:22:26.666+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getId
+2024-02-05T17:22:26.666+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getName
+2024-02-05T17:22:26.666+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getPrice
+2024-02-05T17:22:26.666+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод isActive
+2024-02-05T17:22:26.666+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getId
+2024-02-05T17:22:26.666+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getName
+2024-02-05T17:22:26.666+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getAge
+2024-02-05T17:22:26.666+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getEmail
+2024-02-05T17:22:26.667+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getCart
+2024-02-05T17:22:26.668+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:22:26.669+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getId
+2024-02-05T17:22:26.669+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getName
+2024-02-05T17:22:26.669+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getPrice
+2024-02-05T17:22:26.669+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getId
+2024-02-05T17:22:26.669+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getName
+2024-02-05T17:22:26.669+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getPrice
+2024-02-05T17:22:26.669+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getId
+2024-02-05T17:22:26.669+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getName
+2024-02-05T17:22:26.669+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getPrice
+2024-02-05T17:22:26.669+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getId
+2024-02-05T17:22:26.670+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getName
+2024-02-05T17:22:26.670+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getPrice
+2024-02-05T17:22:26.670+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод isActive
+2024-02-05T17:22:26.670+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getId
+2024-02-05T17:22:26.670+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getName
+2024-02-05T17:22:26.670+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getAge
+2024-02-05T17:22:26.670+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getEmail
+2024-02-05T17:22:26.670+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getCart
+2024-02-05T17:22:26.672+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод isActive
+2024-02-05T17:22:26.672+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод isActive
+2024-02-05T17:22:26.672+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getId
+2024-02-05T17:22:26.672+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getName
+2024-02-05T17:22:26.673+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getAge
+2024-02-05T17:22:26.673+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getEmail
+2024-02-05T17:22:26.673+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getCart
+2024-02-05T17:22:26.675+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод isActive
+2024-02-05T17:22:26.675+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getId
+2024-02-05T17:22:26.675+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getName
+2024-02-05T17:22:26.675+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getAge
+2024-02-05T17:22:26.676+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getEmail
+2024-02-05T17:22:26.676+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getCart
+2024-02-05T17:22:26.678+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод isActive
+2024-02-05T17:22:26.678+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getId
+2024-02-05T17:22:26.678+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getName
+2024-02-05T17:22:26.678+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getAge
+2024-02-05T17:22:26.679+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getEmail
+2024-02-05T17:22:26.679+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getCart
+2024-02-05T17:22:26.680+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод isActive
+2024-02-05T17:22:26.680+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getId
+2024-02-05T17:22:26.680+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getName
+2024-02-05T17:22:26.680+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getAge
+2024-02-05T17:22:26.680+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getEmail
+2024-02-05T17:22:26.680+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getCart
+2024-02-05T17:22:26.682+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод isActive
+2024-02-05T17:22:26.682+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getId
+2024-02-05T17:22:26.682+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getName
+2024-02-05T17:22:26.682+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getAge
+2024-02-05T17:22:26.682+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getEmail
+2024-02-05T17:22:26.682+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getCart
+2024-02-05T17:22:26.684+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод isActive
+2024-02-05T17:22:26.684+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getId
+2024-02-05T17:22:26.684+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getName
+2024-02-05T17:22:26.684+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getAge
+2024-02-05T17:22:26.684+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getEmail
+2024-02-05T17:22:26.684+01:00  INFO 97512 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getCart
+2024-02-05T17:23:44.051+01:00  INFO 97512 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван пустой конструктор JpaCustomer
+2024-02-05T17:23:44.053+01:00  INFO 97512 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод isActive
+2024-02-05T17:23:44.053+01:00  INFO 97512 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getId
+2024-02-05T17:23:44.053+01:00  INFO 97512 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getName
+2024-02-05T17:23:44.053+01:00  INFO 97512 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getAge
+2024-02-05T17:23:44.053+01:00  INFO 97512 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getEmail
+2024-02-05T17:23:44.053+01:00  INFO 97512 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getCart
+2024-02-05T17:23:44.055+01:00  INFO 97512 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:23:44.055+01:00  INFO 97512 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:23:44.056+01:00  INFO 97512 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:23:44.056+01:00  INFO 97512 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getId
+2024-02-05T17:23:44.056+01:00  INFO 97512 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getName
+2024-02-05T17:23:44.056+01:00  INFO 97512 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getPrice
+2024-02-05T17:23:44.056+01:00  INFO 97512 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getId
+2024-02-05T17:23:44.056+01:00  INFO 97512 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getName
+2024-02-05T17:23:44.056+01:00  INFO 97512 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getPrice
+2024-02-05T17:23:44.056+01:00  INFO 97512 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getId
+2024-02-05T17:23:44.056+01:00  INFO 97512 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getName
+2024-02-05T17:23:44.056+01:00  INFO 97512 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getPrice
+2024-02-05T17:24:15.794+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван пустой конструктор JpaCustomer
+2024-02-05T17:24:15.800+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван пустой конструктор JpaCustomer
+2024-02-05T17:24:15.803+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван пустой конструктор JpaCustomer
+2024-02-05T17:24:15.807+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван пустой конструктор JpaCustomer
+2024-02-05T17:24:15.810+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван пустой конструктор JpaCustomer
+2024-02-05T17:24:15.813+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван пустой конструктор JpaCustomer
+2024-02-05T17:24:15.818+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван пустой конструктор JpaCustomer
+2024-02-05T17:24:15.822+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван пустой конструктор JpaCustomer
+2024-02-05T17:24:15.827+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван пустой конструктор JpaCustomer
+2024-02-05T17:24:15.829+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван пустой конструктор JpaCustomer
+2024-02-05T17:24:15.831+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван пустой конструктор JpaCustomer
+2024-02-05T17:24:15.835+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод isActive
+2024-02-05T17:24:15.835+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getId
+2024-02-05T17:24:15.835+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getName
+2024-02-05T17:24:15.835+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getAge
+2024-02-05T17:24:15.835+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getEmail
+2024-02-05T17:24:15.835+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getCart
+2024-02-05T17:24:15.836+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:24:15.837+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:24:15.837+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:24:15.837+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getId
+2024-02-05T17:24:15.837+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getName
+2024-02-05T17:24:15.837+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getPrice
+2024-02-05T17:24:15.838+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getId
+2024-02-05T17:24:15.838+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getName
+2024-02-05T17:24:15.838+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getPrice
+2024-02-05T17:24:15.838+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getId
+2024-02-05T17:24:15.838+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getName
+2024-02-05T17:24:15.838+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getPrice
+2024-02-05T17:24:15.838+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод isActive
+2024-02-05T17:24:15.838+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getId
+2024-02-05T17:24:15.838+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getName
+2024-02-05T17:24:15.838+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getAge
+2024-02-05T17:24:15.838+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getEmail
+2024-02-05T17:24:15.838+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getCart
+2024-02-05T17:24:15.840+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:24:15.840+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:24:15.841+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:24:15.841+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getId
+2024-02-05T17:24:15.841+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getName
+2024-02-05T17:24:15.841+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getPrice
+2024-02-05T17:24:15.841+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getId
+2024-02-05T17:24:15.841+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getName
+2024-02-05T17:24:15.842+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getPrice
+2024-02-05T17:24:15.842+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getId
+2024-02-05T17:24:15.842+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getName
+2024-02-05T17:24:15.842+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getPrice
+2024-02-05T17:24:15.842+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getId
+2024-02-05T17:24:15.842+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getName
+2024-02-05T17:24:15.842+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getPrice
+2024-02-05T17:24:15.842+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод isActive
+2024-02-05T17:24:15.842+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getId
+2024-02-05T17:24:15.842+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getName
+2024-02-05T17:24:15.842+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getAge
+2024-02-05T17:24:15.842+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getEmail
+2024-02-05T17:24:15.842+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getCart
+2024-02-05T17:24:15.843+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван пустой конструктор JpaProduct
+2024-02-05T17:24:15.844+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getId
+2024-02-05T17:24:15.844+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getName
+2024-02-05T17:24:15.844+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getPrice
+2024-02-05T17:24:15.844+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getId
+2024-02-05T17:24:15.844+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getName
+2024-02-05T17:24:15.844+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getPrice
+2024-02-05T17:24:15.844+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getId
+2024-02-05T17:24:15.844+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getName
+2024-02-05T17:24:15.844+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getPrice
+2024-02-05T17:24:15.844+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getId
+2024-02-05T17:24:15.844+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getName
+2024-02-05T17:24:15.844+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaProduct    : Вызван метод getPrice
+2024-02-05T17:24:15.844+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод isActive
+2024-02-05T17:24:15.844+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getId
+2024-02-05T17:24:15.844+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getName
+2024-02-05T17:24:15.844+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getAge
+2024-02-05T17:24:15.844+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getEmail
+2024-02-05T17:24:15.844+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getCart
+2024-02-05T17:24:15.845+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод isActive
+2024-02-05T17:24:15.845+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод isActive
+2024-02-05T17:24:15.845+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getId
+2024-02-05T17:24:15.845+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getName
+2024-02-05T17:24:15.845+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getAge
+2024-02-05T17:24:15.845+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getEmail
+2024-02-05T17:24:15.846+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getCart
+2024-02-05T17:24:15.846+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод isActive
+2024-02-05T17:24:15.847+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getId
+2024-02-05T17:24:15.847+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getName
+2024-02-05T17:24:15.847+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getAge
+2024-02-05T17:24:15.847+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getEmail
+2024-02-05T17:24:15.847+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getCart
+2024-02-05T17:24:15.848+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод isActive
+2024-02-05T17:24:15.848+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getId
+2024-02-05T17:24:15.848+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getName
+2024-02-05T17:24:15.848+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getAge
+2024-02-05T17:24:15.848+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getEmail
+2024-02-05T17:24:15.848+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getCart
+2024-02-05T17:24:15.849+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод isActive
+2024-02-05T17:24:15.849+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getId
+2024-02-05T17:24:15.849+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getName
+2024-02-05T17:24:15.849+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getAge
+2024-02-05T17:24:15.850+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getEmail
+2024-02-05T17:24:15.850+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getCart
+2024-02-05T17:24:15.851+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод isActive
+2024-02-05T17:24:15.851+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getId
+2024-02-05T17:24:15.851+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getName
+2024-02-05T17:24:15.851+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getAge
+2024-02-05T17:24:15.851+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getEmail
+2024-02-05T17:24:15.851+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getCart
+2024-02-05T17:24:15.853+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод isActive
+2024-02-05T17:24:15.853+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getId
+2024-02-05T17:24:15.853+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getName
+2024-02-05T17:24:15.853+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getAge
+2024-02-05T17:24:15.853+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getEmail
+2024-02-05T17:24:15.853+01:00  INFO 97512 --- [http-nio-8080-exec-7] d.a.g_31_2_shop.domain.jpa.JpaCustomer   : Вызван метод getCart
+2024-02-05T17:24:22.808+01:00  INFO 97512 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-05T17:24:22.809+01:00  INFO 97512 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-05T17:24:22.815+01:00  INFO 97512 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
