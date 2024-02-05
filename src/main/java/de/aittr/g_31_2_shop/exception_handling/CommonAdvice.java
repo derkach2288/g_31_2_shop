@@ -39,8 +39,8 @@ public class CommonAdvice {
     }
 
     @ExceptionHandler(ProductValidationException.class)
-    public ResponseEntity<Response> handleException(ProductValidationException e) {
-        Response response = new Response(e.getMessage());
+    public ResponseEntity<ValidationResponse> handleException(ProductValidationException e) {
+        ValidationResponse response = new ValidationResponse(e.getMessage(), e.getCause().getMessage());
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
     @ExceptionHandler(ProductCountException.class)

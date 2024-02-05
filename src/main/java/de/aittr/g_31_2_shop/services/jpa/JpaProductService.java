@@ -41,7 +41,7 @@ public class JpaProductService implements ProductService {
             entity = repository.save(entity);
             return mappingService.mapProductEntityToDto(entity);
         } catch (Exception e) {
-            throw new ProductValidationException("Ошибка валидации продукта: " + e.getMessage());
+            throw new ProductValidationException("Incorrect values of product fields", e);
         }
     }
 
@@ -153,8 +153,13 @@ public class JpaProductService implements ProductService {
     @Override
     public int getActiveProductCount() {
         try {
-//        return getAllActiveProducts().size();
-            return repository.countFindAllByIsActiveTrue();
+            System.out.println();
+            return (int) repository.findAll()
+                    .stream()
+                    .filter(p -> p.isActive())
+                    .count();
+//            return getAllActiveProducts().size();
+//            return repository.countFindAllByIsActiveTrue();
 
         } catch (Exception e) {
             throw new ProductCountException("Ошибка при подсчете количества активных продуктов");
@@ -164,8 +169,13 @@ public class JpaProductService implements ProductService {
     @Override
     public double getActiveProductTotalPrice() {
         try {
+            return repository.findAll()
+                    .stream()
+                    .filter(p -> p.isActive())
+                    .mapToDouble(p -> p.getPrice())
+                    .sum();
             //        return repository.findAllByIsActiveTrue().stream().mapToDouble(p -> p.getPrice()).sum();
-            return repository.getActiveProductTotalPrice();
+//            return repository.getActiveProductTotalPrice();
         } catch (Exception e) {
             throw new ProductPriceException("Ошибка при вычислении суммарной цены для активных продуктов");
         }
@@ -174,8 +184,14 @@ public class JpaProductService implements ProductService {
     @Override
     public double getActiveProductAveragePrice() {
         try {
-            //        return repository.findAllByIsActiveTrue().stream().mapToDouble(p -> p.getPrice()).sum();
-            return repository.getActiveProductAveragePrice();
+            return repository.findAll()
+                    .stream()
+                    .filter(p -> p.isActive())
+                    .mapToDouble(p -> p.getPrice())
+                    .average()
+                    .orElse(0);
+            //        return repository.findAllByIsActiveTrue().stream().mapToDouble(p -> p.getPrice()).orElse(0);
+//            return repository.getActiveProductAveragePrice();
         } catch (Exception e) {
             throw new ProductPriceException("Ошибка при вычислении средней цены для активных продуктов");
         }
