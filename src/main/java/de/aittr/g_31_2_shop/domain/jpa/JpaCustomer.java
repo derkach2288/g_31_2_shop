@@ -32,12 +32,12 @@ public class JpaCustomer implements Customer {
     private String email;
     @OneToOne(mappedBy = "customer") // имя поля в классе Cart (28 строка)
     private JpaCart cart;
-    @Transient
-    private Logger logger = LoggerFactory.getLogger(JpaCustomer.class);
+//    @Transient
+//    private Logger logger = LoggerFactory.getLogger(JpaCustomer.class);
 
 
     public JpaCustomer() {
-        logger.info("Вызван пустой конструктор JpaCustomer");
+//        logger.info("Вызван пустой конструктор JpaCustomer");
     }
 
 //    public JpaCustomer(int id, boolean isActive, String name, JpaCart cart) {
@@ -55,72 +55,72 @@ public class JpaCustomer implements Customer {
         this.email = email;
         this.cart = cart;
 
-        logger.info("Вызван конструктор JpaCustomer с id={}, isActive={}, name={}, age={}, email={} cart={}", id, isActive, name, age, email, cart);
+//        logger.info("Вызван конструктор JpaCustomer с id={}, isActive={}, name={}, age={}, email={} cart={}", id, isActive, name, age, email, cart);
     }
 
     @Override
     public int getId() {
-        logger.info("Вызван метод getId");
+//        logger.info("Вызван метод getId");
         return id;
     }
 
     @Override
     public void setId(int id) {
         this.id = id;
-        logger.info("Вызван метод setId c параметром id={}", id);
+//        logger.info("Вызван метод setId c параметром id={}", id);
     }
 
     @Override
     public boolean isActive() {
-        logger.info("Вызван метод isActive");
+//        logger.info("Вызван метод isActive");
         return isActive;
     }
 
     @Override
     public void setActive(boolean active) {
         isActive = active;
-        logger.info("Вызван метод setActive c параметром active={}", active);
+//        logger.info("Вызван метод setActive c параметром active={}", active);
     }
 
     @Override
     public int getAge() {
-        logger.info("Вызван метод getAge");
+//        logger.info("Вызван метод getAge");
         return age;
     }
 
     @Override
     public void setAge(int age) {
         this.age = age;
-        logger.info("Вызван метод setAge c параметром age={}", age);
+//        logger.info("Вызван метод setAge c параметром age={}", age);
     }
 
     @Override
     public String getEmail() {
-        logger.info("Вызван метод getEmail");
+//        logger.info("Вызван метод getEmail");
         return email;
     }
 
     @Override
     public void setEmail(String email) {
         this.email = email;
-        logger.info("Вызван метод setEmail c параметром email={}", email);
+//        logger.info("Вызван метод setEmail c параметром email={}", email);
     }
 
     @Override
     public String getName() {
-        logger.info("Вызван метод getName");
+//        logger.info("Вызван метод getName");
         return name;
     }
 
     @Override
     public void setName(String name) {
         this.name = name;
-        logger.info("Вызван метод setName c параметром name={}", name);
+//        logger.info("Вызван метод setName c параметром name={}", name);
     }
 
     @Override
     public Cart getCart() {
-        logger.info("Вызван метод getCart");
+//        logger.info("Вызван метод getCart");
         return cart;
     }
 
@@ -128,7 +128,7 @@ public class JpaCustomer implements Customer {
     public void setCart(Cart cart) {
         try {
             this.cart = (JpaCart) cart;
-            logger.info("Вызван метод setCart c параметром cart={}", cart);
+//            logger.info("Вызван метод setCart c параметром cart={}", cart);
         } catch (Exception e) {
             throw new IllegalArgumentException("В сеттер JpaCustomer передан несовместимый тип корзины!");
         }
@@ -136,7 +136,7 @@ public class JpaCustomer implements Customer {
 
     @Override
     public boolean equals(Object o) {
-        logger.info("Вызван метод equals()");
+//        logger.info("Вызван метод equals()");
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
@@ -150,7 +150,7 @@ public class JpaCustomer implements Customer {
 
     @Override
     public int hashCode() {
-        logger.info("Вызван метод hashCode()");
+//        logger.info("Вызван метод hashCode()");
         int result = id;
         result = 31 * result + (isActive ? 1 : 0);
         result = 31 * result + (name != null ? name.hashCode() : 0);
@@ -160,7 +160,7 @@ public class JpaCustomer implements Customer {
 
     @Override
     public String toString() {
-        logger.info("Вызван метод toString()");
+//        logger.info("Вызван метод toString()");
         return "JpaCustomer{" +
                 "id=" + id +
                 ", isActive=" + isActive +
