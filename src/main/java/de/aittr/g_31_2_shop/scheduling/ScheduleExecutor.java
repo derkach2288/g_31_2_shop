@@ -133,10 +133,10 @@ public class ScheduleExecutor {
 //    Время выполнения предыдущей задачи не должно влиять на старт следующей.
 //    Создавать новую задачу и логировать ничего не нужно.
 
-//    @Scheduled(fixedDelayString = "PT30S")
-//    public void getLastFiveTasks() {
-//        taskService.getLastFiveTasks().stream().forEach(System.out::println);
-//    }
+    @Scheduled(fixedDelayString = "PT30S")
+    public void getLastFiveTasks() {
+        taskService.getLastFiveTasks().stream().forEach(System.out::println);
+    }
 
     //
 //            2. Реализовать вывод в консоль последнего добавленного в БД товара.
