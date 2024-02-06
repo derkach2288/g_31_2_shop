@@ -133,7 +133,7 @@ public class ScheduleExecutor {
 //    Время выполнения предыдущей задачи не должно влиять на старт следующей.
 //    Создавать новую задачу и логировать ничего не нужно.
 
-    @Scheduled(fixedDelayString = "PT30S")
+    @Scheduled(fixedRateString = "PT30S")
     public void getLastFiveTasks() {
         taskService.getLastFiveTasks().stream().forEach(System.out::println);
     }
