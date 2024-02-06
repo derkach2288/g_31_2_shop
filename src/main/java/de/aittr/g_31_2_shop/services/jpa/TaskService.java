@@ -6,6 +6,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
+import java.util.List;
+
 @Service
 public class TaskService {
 
@@ -21,4 +24,16 @@ public class TaskService {
         Task task = new Task(description);
         repository.save(task);
     }
+
+    public List<Task> getLastFiveTasks() {
+        List<Task> lastFiveTasks = repository.getLastFiveTasks();
+//        lastFiveTasks.sort((task1, task2) -> task1.getExecutedAt().compareTo(task2.getExecutedAt()));
+        lastFiveTasks.sort(Comparator.comparing(t -> t.getExecutedAt()));
+        return lastFiveTasks;
+    }
+
+    public  void createTaskLastAddedProduct(Task task) {
+        repository.save(task);
+    }
+
 }

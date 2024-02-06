@@ -201,4 +201,10 @@ public class JpaProductService implements ProductService {
         }
 
     }
+
+    public ProductDto lastAddedProduct() {
+        List<JpaProduct> productList = repository.findAll();
+        JpaProduct jpaLastProduct = productList.get(productList.size() - 1);
+        return mappingService.mapProductEntityToDto(jpaLastProduct);
+    }
 }

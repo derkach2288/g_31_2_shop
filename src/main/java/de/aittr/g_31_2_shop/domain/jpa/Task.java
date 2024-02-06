@@ -30,6 +30,10 @@ public class Task {
         return description;
     }
 
+    public Timestamp getExecutedAt() {
+        return executedAt;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
