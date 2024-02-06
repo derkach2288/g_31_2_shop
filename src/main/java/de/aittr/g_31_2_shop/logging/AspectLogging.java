@@ -190,15 +190,4 @@ public class AspectLogging {
         }
     }
 
-
-//    @AfterThrowing(
-//            pointcut = "getActiveProductById()",
-//            throwing = "e"
-//    )
-//    public void trowingExceptionWhileReturningProduct(JoinPoint joinPoint, Exception e) {
-//        Object id = joinPoint.getArgs()[0];
-//        logger.warn("Метод getActiveProductById вызыван с параметром {} и выбросил ошибку: {}", id, e.getMessage());
-//    }
-
-
 }
