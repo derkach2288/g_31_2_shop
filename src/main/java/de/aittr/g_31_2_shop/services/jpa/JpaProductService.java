@@ -50,7 +50,7 @@ public class JpaProductService implements ProductService {
     @Override
     public List<ProductDto> getAllActiveProducts() {
         Task task = new Task("Method getAllActiveProducts called");
-        ScheduleExecutor.scheduleAndExecuteTask(task);
+//        ScheduleExecutor.scheduleAndExecuteTask(task);
         // здесь будет JoinPoint, сюда будет внедрятся вспомолательный код
         return repository.findAll()
                 .stream()
@@ -203,8 +203,9 @@ public class JpaProductService implements ProductService {
     }
 
     public ProductDto lastAddedProduct() {
-        List<JpaProduct> productList = repository.findAll();
-        JpaProduct jpaLastProduct = productList.get(productList.size() - 1);
-        return mappingService.mapProductEntityToDto(jpaLastProduct);
+//        List<JpaProduct> productList = repository.findAll();
+//        JpaProduct jpaLastProduct = productList.get(productList.size() - 1);
+//        return mappingService.mapProductEntityToDto(jpaLastProduct);
+        return mappingService.mapProductEntityToDto(repository.lastAddedProduct());
     }
 }

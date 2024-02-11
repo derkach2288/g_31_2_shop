@@ -8,6 +8,7 @@ import de.aittr.g_31_2_shop.repositories.jpa.JpaCartRepository;
 import de.aittr.g_31_2_shop.repositories.jpa.JpaCustomerRepository;
 import de.aittr.g_31_2_shop.services.interfaces.CustomerService;
 import de.aittr.g_31_2_shop.services.mapping.CustomerMappingService;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -23,6 +24,16 @@ public class JpaCustomerService implements CustomerService {
         this.mappingService = mappingService;
         this.cartRepository = cartRepository;
     }
+
+
+//    @Override
+//    @Transactional
+//    public CustomerDto save(CustomerDto dto) {
+//        JpaCustomer jpaCustomer = mappingService.mapDtoToJpaCustomer(dto);
+//        jpaCustomer.setId(0);
+//        ((JpaCart) jpaCustomer.getCart()).setCustomer(jpaCustomer);
+//        return mappingService.mapCustomerEntityToDto(repository.save(jpaCustomer));
+//    }
 
     @Override
     public CustomerDto save(CustomerDto dto) {

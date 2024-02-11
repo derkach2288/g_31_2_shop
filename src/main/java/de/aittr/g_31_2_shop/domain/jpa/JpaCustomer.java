@@ -30,6 +30,7 @@ public class JpaCustomer implements Customer {
     @Column(name = "email")
     @Email
     private String email;
+//    @OneToOne(mappedBy = "customer", cascade = CascadeType.ALL, orphanRemoval = true) // имя поля в классе Cart (28 строка)
     @OneToOne(mappedBy = "customer") // имя поля в классе Cart (28 строка)
     private JpaCart cart;
 //    @Transient

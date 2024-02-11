@@ -43,4 +43,7 @@ public interface JpaProductRepository extends JpaRepository<JpaProduct, Integer>
     @Query(value = "SELECT ROUND(AVG(price), 2) FROM product WHERE is_active = 1;", nativeQuery = true)
     double getActiveProductAveragePrice();
 
+    @Query(value = "SELECT * FROM product ORDER BY id DESC LIMIT 1;", nativeQuery = true)
+    JpaProduct lastAddedProduct();
+
 }

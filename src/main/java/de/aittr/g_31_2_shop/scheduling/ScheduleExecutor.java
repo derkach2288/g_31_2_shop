@@ -110,13 +110,13 @@ public class ScheduleExecutor {
 //    }
 
 
-    public static void scheduleAndExecuteTask(Task task) {
-        TaskScheduler scheduler = new  DefaultManagedTaskScheduler();
-        scheduler.schedule(
-                () -> logger.info(task.getDescription()),
-                new CronTrigger("0,10,20,30,40,50 * * * * *")
-        );
-    }
+//    public static void scheduleAndExecuteTask(Task task) {
+//        TaskScheduler scheduler = new  DefaultManagedTaskScheduler();
+//        scheduler.schedule(
+//                () -> logger.info(task.getDescription()),
+//                new CronTrigger("0,10,20,30,40,50 * * * * *")
+//        );
+//    }
 
 //    public static void scheduleAndExecuteTask(Task task) {
 //        TaskScheduler scheduler = new  DefaultManagedTaskScheduler();
@@ -133,10 +133,10 @@ public class ScheduleExecutor {
 //    Время выполнения предыдущей задачи не должно влиять на старт следующей.
 //    Создавать новую задачу и логировать ничего не нужно.
 
-    @Scheduled(fixedRateString = "PT30S")
-    public void getLastFiveTasks() {
-        taskService.getLastFiveTasks().stream().forEach(System.out::println);
-    }
+//    @Scheduled(fixedRateString = "PT30S")
+//    public void getLastFiveTasks() {
+//        taskService.getLastFiveTasks().stream().forEach(System.out::println);
+//    }
 
     //
 //            2. Реализовать вывод в консоль последнего добавленного в БД товара.
@@ -147,26 +147,26 @@ public class ScheduleExecutor {
 
 
     // Этот метод каждые 15 и 45 секунд каждой минуты будет сохранять новую задачу в БД
-        @Scheduled(cron = "15,45 * * * * *")
-    public void lastAddedProduct() {
-        Task task = new Task("Последний добавленный в БД продукт - " + jpaProductService.lastAddedProduct().getName());
-        taskService.createTaskLastAddedProduct(task);
-        logger.info(task.getDescription());
-    }
+//        @Scheduled(cron = "15,45 * * * * *")
+//    public void lastAddedProduct() {
+//        Task task = new Task("Последний добавленный в БД продукт - " + jpaProductService.lastAddedProduct().getName());
+//        taskService.createTaskLastAddedProduct(task);
+//        logger.info(task.getDescription());
+//    }
 
 
     // Этот метод при инициализации приложения один раз сохранит задачу в БД и каждые 15 и 45 секунд минуты будет выводить логи
-    @PostConstruct
-    public void init() {
-        TaskScheduler scheduler = new DefaultManagedTaskScheduler();
-                Task task = new Task("Последний добавленный в БД продукт - " + jpaProductService.lastAddedProduct().getName());
-                taskService.createTaskLastAddedProduct(task);
-
-        scheduler.schedule(
-                () -> logger.info(task.getDescription()),
-                new CronTrigger("15,45 * * * * *")
-        );
-    }
+//    @PostConstruct
+//    public void init() {
+//        TaskScheduler scheduler = new DefaultManagedTaskScheduler();
+//                Task task = new Task("Последний добавленный в БД продукт - " + jpaProductService.lastAddedProduct().getName());
+//                taskService.createTaskLastAddedProduct(task);
+//
+//        scheduler.schedule(
+//                () -> logger.info(task.getDescription()),
+//                new CronTrigger("15,45 * * * * *")
+//        );
+//    }
 
 
 }
