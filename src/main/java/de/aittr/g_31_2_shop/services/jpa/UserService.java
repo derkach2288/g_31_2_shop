@@ -4,6 +4,7 @@ import de.aittr.g_31_2_shop.domain.jpa.Role;
 import de.aittr.g_31_2_shop.domain.jpa.User;
 import de.aittr.g_31_2_shop.exception_handling.exceptions.UserAlreadyExistsException;
 import de.aittr.g_31_2_shop.repositories.jpa.UserRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -31,7 +32,7 @@ public class UserService implements UserDetailsService {
         }
         return user;
     }
-
+//    @Transactional
     public User register(User user) {
         User foundUser = repository.findByUsername(user.getUsername());
 
@@ -50,7 +51,7 @@ public class UserService implements UserDetailsService {
         return repository.save(user);
 
     }
-
+//    @Transactional
     public User registerAdmin(User user) {
         User foundUser = repository.findByUsername(user.getUsername());
 
