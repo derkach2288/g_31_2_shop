@@ -33,4 +33,9 @@ public class CustomerController {
     public CustomerDto getById(@PathVariable int id) {
         return service.getActiveCustomerById(id);
     }
+
+    @PutMapping("/add_product")
+    public void addProductToCart(@RequestParam int customerId, @RequestParam int productId) {
+        service.addProductToCart(customerId, productId);
+    }
 }

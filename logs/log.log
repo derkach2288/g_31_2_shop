@@ -1,70 +1,784 @@
-2024-02-12T10:12:14.655+01:00  INFO 25158 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 20.0.2 with PID 25158 (/Users/admin/Documents/AIT_BACK/g_31_2_shop/target/classes started by admin in /Users/admin/Documents/AIT_BACK/g_31_2_shop)
-2024-02-12T10:12:14.668+01:00  INFO 25158 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
-2024-02-12T10:12:15.561+01:00  INFO 25158 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-12T10:12:15.652+01:00  INFO 25158 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 5 JPA repository interfaces.
-2024-02-12T10:12:16.860+01:00  INFO 25158 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-02-12T10:12:16.873+01:00  INFO 25158 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-02-12T10:12:16.874+01:00  INFO 25158 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
-2024-02-12T10:12:16.986+01:00  INFO 25158 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-02-12T10:12:16.986+01:00  INFO 25158 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2238 ms
-2024-02-12T10:12:17.313+01:00  INFO 25158 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-02-12T10:12:17.393+01:00  INFO 25158 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
-2024-02-12T10:12:17.396+01:00  INFO 25158 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2024-02-12T10:12:17.743+01:00  INFO 25158 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-12T10:12:17.773+01:00  INFO 25158 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-02-12T10:12:18.157+01:00  INFO 25158 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2d9de284
-2024-02-12T10:12:18.160+01:00  INFO 25158 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-02-12T10:12:19.378+01:00  INFO 25158 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-02-12T10:12:19.381+01:00  INFO 25158 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-12T10:12:20.351+01:00  INFO 25158 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-02-12T10:12:20.896+01:00  WARN 25158 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-02-12T10:12:21.504+01:00  INFO 25158 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@570089c4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@409df37d, org.springframework.security.web.context.SecurityContextHolderFilter@30d3f583, org.springframework.security.web.header.HeaderWriterFilter@38276668, org.springframework.security.web.authentication.logout.LogoutFilter@75f9a35a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5257123d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@73b034ca, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3f9ee527, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2ab1c7a9, org.springframework.security.web.access.ExceptionTranslationFilter@6b6bae60, org.springframework.security.web.access.intercept.AuthorizationFilter@339b45f8]
-2024-02-12T10:12:21.996+01:00  INFO 25158 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-02-12T10:12:22.007+01:00  INFO 25158 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 7.971 seconds (process running for 8.448)
-2024-02-12T10:12:33.867+01:00  INFO 25158 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-02-12T10:12:33.867+01:00  INFO 25158 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-02-12T10:12:33.869+01:00  INFO 25158 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-02-12T10:12:33.974+01:00  INFO 25158 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод register класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [User{id=0, username='Gena', password='qwe', roles=[]}]
-2024-02-12T10:12:34.282+01:00  INFO 25158 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод register класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [User{id=10, username='Gena', password='$2a$10$t1C0aODKqN8mRlNwKa53/.halY4KdqGKPHH3/Qe9To7kqntDpS3Ma', roles=[Role{id=2, name='ROLE_CUSTOMER'}]}] вернул результат User{id=10, username='Gena', password='$2a$10$t1C0aODKqN8mRlNwKa53/.halY4KdqGKPHH3/Qe9To7kqntDpS3Ma', roles=[Role{id=2, name='ROLE_CUSTOMER'}]}
-2024-02-12T10:12:34.284+01:00  INFO 25158 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод register класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [User{id=10, username='Gena', password='$2a$10$t1C0aODKqN8mRlNwKa53/.halY4KdqGKPHH3/Qe9To7kqntDpS3Ma', roles=[Role{id=2, name='ROLE_CUSTOMER'}]}]
-2024-02-12T10:15:10.646+01:00  INFO 25158 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-02-12T10:15:10.649+01:00  INFO 25158 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-02-12T10:15:10.656+01:00  INFO 25158 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-02-12T11:05:27.884+01:00  INFO 25609 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 20.0.2 with PID 25609 (/Users/admin/Documents/AIT_BACK/g_31_2_shop/target/classes started by admin in /Users/admin/Documents/AIT_BACK/g_31_2_shop)
-2024-02-12T11:05:27.888+01:00  INFO 25609 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
-2024-02-12T11:05:28.711+01:00  INFO 25609 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-12T11:05:28.791+01:00  INFO 25609 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 5 JPA repository interfaces.
-2024-02-12T11:05:29.963+01:00  INFO 25609 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-02-12T11:05:29.974+01:00  INFO 25609 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-02-12T11:05:29.975+01:00  INFO 25609 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
-2024-02-12T11:05:30.111+01:00  INFO 25609 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-02-12T11:05:30.112+01:00  INFO 25609 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2161 ms
-2024-02-12T11:05:30.510+01:00  INFO 25609 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-02-12T11:05:30.575+01:00  INFO 25609 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
-2024-02-12T11:05:30.578+01:00  INFO 25609 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2024-02-12T11:05:30.889+01:00  INFO 25609 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-12T11:05:30.917+01:00  INFO 25609 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-02-12T11:05:31.319+01:00  INFO 25609 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@166e5a6d
-2024-02-12T11:05:31.321+01:00  INFO 25609 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-02-12T11:05:32.506+01:00  INFO 25609 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-02-12T11:05:32.509+01:00  INFO 25609 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-12T11:05:33.529+01:00  INFO 25609 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-02-12T11:05:34.250+01:00  WARN 25609 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-02-12T11:05:34.904+01:00  INFO 25609 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@38276668, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e09c7a2, org.springframework.security.web.context.SecurityContextHolderFilter@1851f19f, org.springframework.security.web.header.HeaderWriterFilter@5dcec8e9, org.springframework.security.web.authentication.logout.LogoutFilter@4d86f330, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@22c14d10, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5cb3cfef, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@197da701, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2688b2be, org.springframework.security.web.access.ExceptionTranslationFilter@6c8f5262, org.springframework.security.web.access.intercept.AuthorizationFilter@106c3e0a]
-2024-02-12T11:05:35.547+01:00  INFO 25609 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-02-12T11:05:35.561+01:00  INFO 25609 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 8.24 seconds (process running for 8.645)
-2024-02-12T11:05:50.748+01:00  INFO 25609 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-02-12T11:05:50.748+01:00  INFO 25609 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-02-12T11:05:50.749+01:00  INFO 25609 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-02-12T11:06:10.226+01:00  INFO 25609 --- [http-nio-8080-exec-3] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Vanya]
-2024-02-12T11:06:10.382+01:00  INFO 25609 --- [http-nio-8080-exec-3] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Vanya] вернул результат User{id=1, username='Vanya', password='$2a$10$ioyabJDsZ6uCH.uh0T4eNuajW9yDX6ZtOz5Irpw4ys2Tugq7QQWSq', roles=[Role{id=2, name='ROLE_CUSTOMER'}]}
-2024-02-12T11:06:10.387+01:00  INFO 25609 --- [http-nio-8080-exec-3] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Vanya]
-2024-02-12T11:06:22.899+01:00  INFO 25609 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
-2024-02-12T11:06:22.908+01:00  INFO 25609 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin] вернул результат User{id=5, username='Admin', password='$2a$10$kLW6xDlU0Vxs9NevoFnlXOyim8b3vNoBK9k2l71Nq08TyRLE3ZEzm', roles=[Role{id=2, name='ROLE_CUSTOMER'}, Role{id=1, name='ROLE_ADMIN'}]}
-2024-02-12T11:06:22.909+01:00  INFO 25609 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
-2024-02-12T11:06:23.002+01:00  INFO 25609 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод getAllActiveCustomers класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService
-2024-02-12T11:06:23.089+01:00  INFO 25609 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод getAllActiveCustomers класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService вернул результат [CustomerDto{id=1, name='Vanya', cart=CartDto{id=4, products=[ProductDto{id=1, name='Banana', price=120.0}, ProductDto{id=2, name='Apple', price=90.0}, ProductDto{id=3, name='Orange', price=210.0}]}}, CustomerDto{id=2, name='Petya', cart=CartDto{id=5, products=[ProductDto{id=3, name='Orange', price=210.0}, ProductDto{id=4, name='Carrot', price=60.0}, ProductDto{id=5, name='Potato', price=70.0}, ProductDto{id=6, name='Coconut', price=300.0}]}}, CustomerDto{id=3, name='Sidor', cart=CartDto{id=6, products=[ProductDto{id=1, name='Banana', price=120.0}, ProductDto{id=3, name='Orange', price=210.0}, ProductDto{id=5, name='Potato', price=70.0}, ProductDto{id=7, name='Peach', price=170.0}]}}, CustomerDto{id=4, name='Vasya', cart=CartDto{id=7, products=[]}}, CustomerDto{id=6, name='Alex', cart=CartDto{id=9, products=[]}}, CustomerDto{id=7, name='Oleg', cart=CartDto{id=10, products=[]}}, CustomerDto{id=8, name='Ivan', cart=CartDto{id=11, products=[]}}, CustomerDto{id=9, name='Max', cart=CartDto{id=12, products=[]}}, CustomerDto{id=24, name='Mark', cart=CartDto{id=16, products=[]}}, CustomerDto{id=26, name='Markiz', cart=CartDto{id=17, products=[]}}, CustomerDto{id=27, name='Vasiliy', cart=CartDto{id=18, products=[]}}, CustomerDto{id=28, name='Vasiliy', cart=CartDto{id=19, products=[]}}, CustomerDto{id=32, name='Gleb', cart=CartDto{id=20, products=[]}}, CustomerDto{id=36, name='Ket', cart=CartDto{id=22, products=[]}}]
-2024-02-12T11:06:23.094+01:00  INFO 25609 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод getAllActiveCustomers класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService
-2024-02-12T11:12:44.879+01:00  INFO 25609 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-02-12T11:12:44.881+01:00  INFO 25609 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-02-12T11:12:44.891+01:00  INFO 25609 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-15T11:30:40.392+01:00  INFO 42040 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 20.0.2 with PID 42040 (/Users/admin/Documents/AIT_BACK/g_31_2_shop/target/classes started by admin in /Users/admin/Documents/AIT_BACK/g_31_2_shop)
+2024-02-15T11:30:40.404+01:00  INFO 42040 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-15T11:30:41.298+01:00  INFO 42040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-15T11:30:41.392+01:00  INFO 42040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 5 JPA repository interfaces.
+2024-02-15T11:30:42.522+01:00  INFO 42040 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-15T11:30:42.534+01:00  INFO 42040 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-15T11:30:42.535+01:00  INFO 42040 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-02-15T11:30:42.622+01:00  INFO 42040 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-15T11:30:42.622+01:00  INFO 42040 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2150 ms
+2024-02-15T11:30:42.925+01:00  INFO 42040 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-15T11:30:42.994+01:00  INFO 42040 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-02-15T11:30:42.996+01:00  INFO 42040 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-02-15T11:30:43.310+01:00  INFO 42040 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-15T11:30:43.339+01:00  INFO 42040 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-15T11:30:43.678+01:00  INFO 42040 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2d9de284
+2024-02-15T11:30:43.679+01:00  INFO 42040 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-15T11:30:44.924+01:00  INFO 42040 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-15T11:30:44.928+01:00  INFO 42040 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15T11:30:45.825+01:00  INFO 42040 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-15T11:30:46.389+01:00  WARN 42040 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-15T11:30:46.958+01:00  INFO 42040 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@66d766b9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f36c8b1, org.springframework.security.web.context.SecurityContextHolderFilter@28901fe7, org.springframework.security.web.header.HeaderWriterFilter@6f0df74, org.springframework.security.web.authentication.logout.LogoutFilter@e09c7a2, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6a08113d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34ac72c3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@449f9628, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@251db193, org.springframework.security.web.access.ExceptionTranslationFilter@159a32a4, org.springframework.security.web.access.intercept.AuthorizationFilter@2a41d17a]
+2024-02-15T11:30:47.482+01:00  INFO 42040 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-15T11:30:47.494+01:00  INFO 42040 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 7.757 seconds (process running for 8.364)
+2024-02-15T11:31:34.036+01:00  INFO 42040 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-15T11:31:34.036+01:00  INFO 42040 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-15T11:31:34.038+01:00  INFO 42040 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-02-15T11:31:44.804+01:00  INFO 42040 --- [http-nio-8080-exec-3] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Petya]
+2024-02-15T11:31:44.980+01:00  INFO 42040 --- [http-nio-8080-exec-3] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Petya] вернул результат User{id=2, username='Petya', password='$2a$10$ioyabJDsZ6uCH.uh0T4eNuajW9yDX6ZtOz5Irpw4ys2Tugq7QQWSq', roles=[Role{id=2, name='ROLE_CUSTOMER'}]}
+2024-02-15T11:31:44.985+01:00  INFO 42040 --- [http-nio-8080-exec-3] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Petya]
+2024-02-15T11:31:48.081+01:00  INFO 42040 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Petya]
+2024-02-15T11:31:48.088+01:00  INFO 42040 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Petya] вернул результат User{id=2, username='Petya', password='$2a$10$ioyabJDsZ6uCH.uh0T4eNuajW9yDX6ZtOz5Irpw4ys2Tugq7QQWSq', roles=[Role{id=2, name='ROLE_CUSTOMER'}]}
+2024-02-15T11:31:48.088+01:00  INFO 42040 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Petya]
+2024-02-15T11:32:13.485+01:00  INFO 42040 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T11:32:13.494+01:00  INFO 42040 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin] вернул результат User{id=5, username='Admin', password='$2a$10$kLW6xDlU0Vxs9NevoFnlXOyim8b3vNoBK9k2l71Nq08TyRLE3ZEzm', roles=[Role{id=2, name='ROLE_CUSTOMER'}, Role{id=1, name='ROLE_ADMIN'}]}
+2024-02-15T11:32:13.495+01:00  INFO 42040 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T11:32:13.592+01:00  INFO 42040 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод getAllActiveCustomers класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService
+2024-02-15T11:32:13.683+01:00  INFO 42040 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод getAllActiveCustomers класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService вернул результат [CustomerDto{id=1, name='Vanya', cart=CartDto{id=4, products=[ProductDto{id=1, name='Banana', price=120.0}, ProductDto{id=2, name='Apple', price=90.0}, ProductDto{id=3, name='Orange', price=210.0}]}}, CustomerDto{id=2, name='Petya', cart=CartDto{id=5, products=[ProductDto{id=3, name='Orange', price=210.0}, ProductDto{id=4, name='Carrot', price=60.0}, ProductDto{id=5, name='Potato', price=70.0}]}}, CustomerDto{id=3, name='Sidor', cart=CartDto{id=6, products=[ProductDto{id=1, name='Banana', price=120.0}, ProductDto{id=3, name='Orange', price=210.0}, ProductDto{id=5, name='Potato', price=70.0}, ProductDto{id=7, name='Peach', price=170.0}]}}, CustomerDto{id=4, name='Vasya', cart=CartDto{id=7, products=[]}}, CustomerDto{id=6, name='Alex', cart=CartDto{id=9, products=[]}}, CustomerDto{id=7, name='Oleg', cart=CartDto{id=10, products=[]}}, CustomerDto{id=8, name='Ivan', cart=CartDto{id=11, products=[]}}, CustomerDto{id=9, name='Max', cart=CartDto{id=12, products=[]}}, CustomerDto{id=24, name='Mark', cart=CartDto{id=16, products=[]}}, CustomerDto{id=26, name='Markiz', cart=CartDto{id=17, products=[]}}, CustomerDto{id=27, name='Vasiliy', cart=CartDto{id=18, products=[]}}, CustomerDto{id=28, name='Vasiliy', cart=CartDto{id=19, products=[]}}, CustomerDto{id=32, name='Gleb', cart=CartDto{id=20, products=[]}}, CustomerDto{id=36, name='Ket', cart=CartDto{id=22, products=[]}}]
+2024-02-15T11:32:13.687+01:00  INFO 42040 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод getAllActiveCustomers класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService
+2024-02-15T11:33:37.537+01:00  INFO 42040 --- [http-nio-8080-exec-8] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T11:33:37.544+01:00  INFO 42040 --- [http-nio-8080-exec-8] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin] вернул результат User{id=5, username='Admin', password='$2a$10$kLW6xDlU0Vxs9NevoFnlXOyim8b3vNoBK9k2l71Nq08TyRLE3ZEzm', roles=[Role{id=2, name='ROLE_CUSTOMER'}, Role{id=1, name='ROLE_ADMIN'}]}
+2024-02-15T11:33:37.544+01:00  INFO 42040 --- [http-nio-8080-exec-8] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T11:33:37.703+01:00  INFO 42040 --- [http-nio-8080-exec-8] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод save класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [CustomerDto{id=1, name='Mary', cart=CartDto{id=4, products=[ProductDto{id=1, name='Banana', price=120.0}, ProductDto{id=2, name='Apple', price=90.0}, ProductDto{id=3, name='Orange', price=210.0}]}}]
+2024-02-15T11:33:37.765+01:00  INFO 42040 --- [http-nio-8080-exec-8] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод save класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [CustomerDto{id=1, name='Mary', cart=CartDto{id=4, products=[ProductDto{id=1, name='Banana', price=120.0}, ProductDto{id=2, name='Apple', price=90.0}, ProductDto{id=3, name='Orange', price=210.0}]}}] вернул результат CustomerDto{id=38, name='Mary', cart=CartDto{id=24, products=[]}}
+2024-02-15T11:33:37.766+01:00  INFO 42040 --- [http-nio-8080-exec-8] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод save класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [CustomerDto{id=1, name='Mary', cart=CartDto{id=4, products=[ProductDto{id=1, name='Banana', price=120.0}, ProductDto{id=2, name='Apple', price=90.0}, ProductDto{id=3, name='Orange', price=210.0}]}}]
+2024-02-15T11:40:20.751+01:00  INFO 42040 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15T11:40:20.754+01:00  INFO 42040 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-15T11:40:20.761+01:00  INFO 42040 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-15T11:48:59.706+01:00  INFO 42217 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 20.0.2 with PID 42217 (/Users/admin/Documents/AIT_BACK/g_31_2_shop/target/classes started by admin in /Users/admin/Documents/AIT_BACK/g_31_2_shop)
+2024-02-15T11:48:59.709+01:00  INFO 42217 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-15T11:49:00.587+01:00  INFO 42217 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-15T11:49:00.681+01:00  INFO 42217 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 5 JPA repository interfaces.
+2024-02-15T11:49:01.786+01:00  INFO 42217 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-15T11:49:01.797+01:00  INFO 42217 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-15T11:49:01.798+01:00  INFO 42217 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-02-15T11:49:01.891+01:00  INFO 42217 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-15T11:49:01.892+01:00  INFO 42217 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2107 ms
+2024-02-15T11:49:02.205+01:00  INFO 42217 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-15T11:49:02.266+01:00  INFO 42217 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-02-15T11:49:02.268+01:00  INFO 42217 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-02-15T11:49:02.563+01:00  INFO 42217 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-15T11:49:02.588+01:00  INFO 42217 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-15T11:49:02.937+01:00  INFO 42217 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@55e91e61
+2024-02-15T11:49:02.939+01:00  INFO 42217 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-15T11:49:04.060+01:00  INFO 42217 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-15T11:49:04.063+01:00  INFO 42217 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15T11:49:04.983+01:00  INFO 42217 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-15T11:49:05.534+01:00  WARN 42217 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-15T11:49:06.152+01:00  INFO 42217 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7f922523, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1509bd56, org.springframework.security.web.context.SecurityContextHolderFilter@6ba516ff, org.springframework.security.web.header.HeaderWriterFilter@5a8149f6, org.springframework.security.web.authentication.logout.LogoutFilter@60660d21, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3c20abd6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@769c80d1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7cddc50f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2c4eda3a, org.springframework.security.web.access.ExceptionTranslationFilter@60cbba57, org.springframework.security.web.access.intercept.AuthorizationFilter@3aebdb4]
+2024-02-15T11:49:06.701+01:00  INFO 42217 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-15T11:49:06.711+01:00  INFO 42217 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 7.626 seconds (process running for 8.073)
+2024-02-15T11:49:16.738+01:00  INFO 42217 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-15T11:49:16.738+01:00  INFO 42217 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-15T11:49:16.740+01:00  INFO 42217 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-02-15T11:49:16.873+01:00  INFO 42217 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T11:49:17.061+01:00  INFO 42217 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin] вернул результат User{id=5, username='Admin', password='$2a$10$kLW6xDlU0Vxs9NevoFnlXOyim8b3vNoBK9k2l71Nq08TyRLE3ZEzm', roles=[Role{id=2, name='ROLE_CUSTOMER'}, Role{id=1, name='ROLE_ADMIN'}]}
+2024-02-15T11:49:17.066+01:00  INFO 42217 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T11:49:17.296+01:00  INFO 42217 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод save класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [CustomerDto{id=1, name='Mariana', cart=CartDto{id=4, products=[ProductDto{id=1, name='Banana', price=120.0}, ProductDto{id=2, name='Apple', price=90.0}, ProductDto{id=3, name='Orange', price=210.0}]}}]
+2024-02-15T11:49:17.375+01:00  INFO 42217 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод save класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [CustomerDto{id=1, name='Mariana', cart=CartDto{id=4, products=[ProductDto{id=1, name='Banana', price=120.0}, ProductDto{id=2, name='Apple', price=90.0}, ProductDto{id=3, name='Orange', price=210.0}]}}] вернул результат CustomerDto{id=39, name='Mariana', cart=CartDto{id=25, products=[]}}
+2024-02-15T11:49:17.376+01:00  INFO 42217 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод save класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [CustomerDto{id=1, name='Mariana', cart=CartDto{id=4, products=[ProductDto{id=1, name='Banana', price=120.0}, ProductDto{id=2, name='Apple', price=90.0}, ProductDto{id=3, name='Orange', price=210.0}]}}]
+2024-02-15T11:50:59.895+01:00  INFO 42217 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15T11:50:59.897+01:00  INFO 42217 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-15T11:50:59.904+01:00  INFO 42217 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-15T12:46:10.282+01:00  INFO 42750 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 20.0.2 with PID 42750 (/Users/admin/Documents/AIT_BACK/g_31_2_shop/target/classes started by admin in /Users/admin/Documents/AIT_BACK/g_31_2_shop)
+2024-02-15T12:46:10.285+01:00  INFO 42750 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-15T12:46:11.112+01:00  INFO 42750 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-15T12:46:11.200+01:00  INFO 42750 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78 ms. Found 5 JPA repository interfaces.
+2024-02-15T12:46:12.292+01:00  INFO 42750 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-15T12:46:12.302+01:00  INFO 42750 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-15T12:46:12.302+01:00  INFO 42750 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-02-15T12:46:12.397+01:00  INFO 42750 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-15T12:46:12.398+01:00  INFO 42750 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2047 ms
+2024-02-15T12:46:12.732+01:00  INFO 42750 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-15T12:46:12.781+01:00  INFO 42750 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-02-15T12:46:12.783+01:00  INFO 42750 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-02-15T12:46:13.044+01:00  INFO 42750 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-15T12:46:13.068+01:00  INFO 42750 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-15T12:46:13.410+01:00  INFO 42750 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@166e5a6d
+2024-02-15T12:46:13.412+01:00  INFO 42750 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-15T12:46:14.582+01:00  INFO 42750 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-15T12:46:14.585+01:00  INFO 42750 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15T12:46:15.547+01:00  INFO 42750 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-15T12:46:16.131+01:00  WARN 42750 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-15T12:46:16.759+01:00  INFO 42750 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7915111a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@37aec9b, org.springframework.security.web.context.SecurityContextHolderFilter@411e567e, org.springframework.security.web.header.HeaderWriterFilter@655d5285, org.springframework.security.web.authentication.logout.LogoutFilter@c2ddfeb, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3db145f7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@75f9a35a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@49d5c751, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34538ffe, org.springframework.security.web.access.ExceptionTranslationFilter@381d7c4c, org.springframework.security.web.access.intercept.AuthorizationFilter@76379796]
+2024-02-15T12:46:17.359+01:00  INFO 42750 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-15T12:46:17.373+01:00  INFO 42750 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 7.635 seconds (process running for 8.078)
+2024-02-15T12:48:18.447+01:00  INFO 42750 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-15T12:48:18.449+01:00  INFO 42750 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-15T12:48:18.451+01:00  INFO 42750 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-02-15T12:48:18.593+01:00  INFO 42750 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T12:48:18.784+01:00  INFO 42750 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin] вернул результат User{id=5, username='Admin', password='$2a$10$kLW6xDlU0Vxs9NevoFnlXOyim8b3vNoBK9k2l71Nq08TyRLE3ZEzm', roles=[Role{id=2, name='ROLE_CUSTOMER'}, Role{id=1, name='ROLE_ADMIN'}]}
+2024-02-15T12:48:18.790+01:00  INFO 42750 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T12:48:18.948+01:00  WARN 42750 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'customerId' for method parameter type int is not present]
+2024-02-15T12:49:16.645+01:00  INFO 42750 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15T12:49:16.648+01:00  INFO 42750 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-15T12:49:16.654+01:00  INFO 42750 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-15T12:49:21.090+01:00  INFO 42782 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 20.0.2 with PID 42782 (/Users/admin/Documents/AIT_BACK/g_31_2_shop/target/classes started by admin in /Users/admin/Documents/AIT_BACK/g_31_2_shop)
+2024-02-15T12:49:21.093+01:00  INFO 42782 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-15T12:49:21.945+01:00  INFO 42782 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-15T12:49:22.056+01:00  INFO 42782 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 5 JPA repository interfaces.
+2024-02-15T12:49:23.215+01:00  INFO 42782 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-15T12:49:23.227+01:00  INFO 42782 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-15T12:49:23.227+01:00  INFO 42782 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-02-15T12:49:23.329+01:00  INFO 42782 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-15T12:49:23.330+01:00  INFO 42782 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2182 ms
+2024-02-15T12:49:23.654+01:00  INFO 42782 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-15T12:49:23.714+01:00  INFO 42782 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-02-15T12:49:23.718+01:00  INFO 42782 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-02-15T12:49:24.003+01:00  INFO 42782 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-15T12:49:24.034+01:00  INFO 42782 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-15T12:49:24.463+01:00  INFO 42782 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@166e5a6d
+2024-02-15T12:49:24.467+01:00  INFO 42782 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-15T12:49:25.728+01:00  INFO 42782 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-15T12:49:25.731+01:00  INFO 42782 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15T12:49:26.644+01:00  INFO 42782 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-15T12:49:27.323+01:00  WARN 42782 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-15T12:49:28.007+01:00  INFO 42782 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3aec2f59, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7f72855d, org.springframework.security.web.context.SecurityContextHolderFilter@261c5d1f, org.springframework.security.web.header.HeaderWriterFilter@75c095a5, org.springframework.security.web.authentication.logout.LogoutFilter@37aec9b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5c960f64, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@409df37d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e818345, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13f358f8, org.springframework.security.web.access.ExceptionTranslationFilter@495a9305, org.springframework.security.web.access.intercept.AuthorizationFilter@64864875]
+2024-02-15T12:49:28.566+01:00  INFO 42782 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-15T12:49:28.577+01:00  INFO 42782 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 7.992 seconds (process running for 8.391)
+2024-02-15T12:49:40.878+01:00  INFO 42782 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-15T12:49:40.878+01:00  INFO 42782 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-15T12:49:40.879+01:00  INFO 42782 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-02-15T12:49:41.009+01:00  INFO 42782 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T12:49:41.173+01:00  INFO 42782 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin] вернул результат User{id=5, username='Admin', password='$2a$10$kLW6xDlU0Vxs9NevoFnlXOyim8b3vNoBK9k2l71Nq08TyRLE3ZEzm', roles=[Role{id=2, name='ROLE_CUSTOMER'}, Role{id=1, name='ROLE_ADMIN'}]}
+2024-02-15T12:49:41.179+01:00  INFO 42782 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T12:49:41.342+01:00  WARN 42782 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'customerId' for method parameter type int is not present]
+2024-02-15T12:49:58.241+01:00  INFO 42782 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T12:49:58.247+01:00  INFO 42782 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin] вернул результат User{id=5, username='Admin', password='$2a$10$kLW6xDlU0Vxs9NevoFnlXOyim8b3vNoBK9k2l71Nq08TyRLE3ZEzm', roles=[Role{id=2, name='ROLE_CUSTOMER'}, Role{id=1, name='ROLE_ADMIN'}]}
+2024-02-15T12:49:58.247+01:00  INFO 42782 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T12:49:58.338+01:00  WARN 42782 --- [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'customerId' for method parameter type int is not present]
+2024-02-15T12:50:07.919+01:00  INFO 42782 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15T12:50:07.922+01:00  INFO 42782 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-15T12:50:07.928+01:00  INFO 42782 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-15T12:50:18.366+01:00  INFO 42792 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 20.0.2 with PID 42792 (/Users/admin/Documents/AIT_BACK/g_31_2_shop/target/classes started by admin in /Users/admin/Documents/AIT_BACK/g_31_2_shop)
+2024-02-15T12:50:18.368+01:00  INFO 42792 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-15T12:50:19.114+01:00  INFO 42792 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-15T12:50:19.203+01:00  INFO 42792 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 5 JPA repository interfaces.
+2024-02-15T12:50:20.292+01:00  INFO 42792 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-15T12:50:20.302+01:00  INFO 42792 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-15T12:50:20.302+01:00  INFO 42792 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-02-15T12:50:20.390+01:00  INFO 42792 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-15T12:50:20.391+01:00  INFO 42792 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1971 ms
+2024-02-15T12:50:20.686+01:00  INFO 42792 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-15T12:50:20.732+01:00  INFO 42792 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-02-15T12:50:20.738+01:00  INFO 42792 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-02-15T12:50:20.972+01:00  INFO 42792 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-15T12:50:20.995+01:00  INFO 42792 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-15T12:50:21.334+01:00  INFO 42792 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5597ca3
+2024-02-15T12:50:21.336+01:00  INFO 42792 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-15T12:50:22.351+01:00  INFO 42792 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-15T12:50:22.355+01:00  INFO 42792 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15T12:50:23.229+01:00  INFO 42792 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-15T12:50:23.805+01:00  WARN 42792 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-15T12:50:24.436+01:00  INFO 42792 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@66c88fce, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ccfce5a, org.springframework.security.web.context.SecurityContextHolderFilter@64864875, org.springframework.security.web.header.HeaderWriterFilter@7f6137fb, org.springframework.security.web.authentication.logout.LogoutFilter@31aee6d9, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@147203c2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6eeb15f9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@568cbf8d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@68a7bc12, org.springframework.security.web.access.ExceptionTranslationFilter@34538ffe, org.springframework.security.web.access.intercept.AuthorizationFilter@36def543]
+2024-02-15T12:50:24.931+01:00  INFO 42792 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-15T12:50:24.944+01:00  INFO 42792 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 7.086 seconds (process running for 7.476)
+2024-02-15T12:50:30.019+01:00  INFO 42792 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-15T12:50:30.019+01:00  INFO 42792 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-15T12:50:30.021+01:00  INFO 42792 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-02-15T12:50:30.169+01:00  INFO 42792 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T12:50:30.334+01:00  INFO 42792 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin] вернул результат User{id=5, username='Admin', password='$2a$10$kLW6xDlU0Vxs9NevoFnlXOyim8b3vNoBK9k2l71Nq08TyRLE3ZEzm', roles=[Role{id=2, name='ROLE_CUSTOMER'}, Role{id=1, name='ROLE_ADMIN'}]}
+2024-02-15T12:50:30.338+01:00  INFO 42792 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T12:50:30.468+01:00  WARN 42792 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'customerId' for method parameter type int is not present]
+2024-02-15T12:50:57.175+01:00  INFO 42792 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T12:50:57.183+01:00  INFO 42792 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin] вернул результат User{id=5, username='Admin', password='$2a$10$kLW6xDlU0Vxs9NevoFnlXOyim8b3vNoBK9k2l71Nq08TyRLE3ZEzm', roles=[Role{id=2, name='ROLE_CUSTOMER'}, Role{id=1, name='ROLE_ADMIN'}]}
+2024-02-15T12:50:57.183+01:00  INFO 42792 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T12:50:57.289+01:00  INFO 42792 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод addProductToCart класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [30, 30]
+2024-02-15T12:50:57.290+01:00  INFO 42792 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод getActiveJpaProductById класса de.aittr.g_31_2_shop.services.jpa.JpaProductService с параметрами [30]
+2024-02-15T12:50:57.314+01:00  INFO 42792 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод getActiveJpaProductById класса de.aittr.g_31_2_shop.services.jpa.JpaProductService с параметрами [30] вернул ошибку There is no product with id [30] in the database
+2024-02-15T12:50:57.315+01:00  INFO 42792 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод getActiveJpaProductById класса de.aittr.g_31_2_shop.services.jpa.JpaProductService с параметрами [30]
+2024-02-15T12:50:57.315+01:00  INFO 42792 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод addProductToCart класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [30, 30] вернул ошибку There is no product with id [30] in the database
+2024-02-15T12:50:57.315+01:00  INFO 42792 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод addProductToCart класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [30, 30]
+2024-02-15T12:51:23.142+01:00  INFO 42792 --- [http-nio-8080-exec-6] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T12:51:23.152+01:00  INFO 42792 --- [http-nio-8080-exec-6] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin] вернул результат User{id=5, username='Admin', password='$2a$10$kLW6xDlU0Vxs9NevoFnlXOyim8b3vNoBK9k2l71Nq08TyRLE3ZEzm', roles=[Role{id=2, name='ROLE_CUSTOMER'}, Role{id=1, name='ROLE_ADMIN'}]}
+2024-02-15T12:51:23.153+01:00  INFO 42792 --- [http-nio-8080-exec-6] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T12:51:23.249+01:00  INFO 42792 --- [http-nio-8080-exec-6] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод addProductToCart класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [30, 6]
+2024-02-15T12:51:23.249+01:00  INFO 42792 --- [http-nio-8080-exec-6] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод getActiveJpaProductById класса de.aittr.g_31_2_shop.services.jpa.JpaProductService с параметрами [6]
+2024-02-15T12:51:23.255+01:00  INFO 42792 --- [http-nio-8080-exec-6] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод getActiveJpaProductById класса de.aittr.g_31_2_shop.services.jpa.JpaProductService с параметрами [6] вернул ошибку Product with id [6] is inactive and cannot be retrieved
+2024-02-15T12:51:23.255+01:00  INFO 42792 --- [http-nio-8080-exec-6] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод getActiveJpaProductById класса de.aittr.g_31_2_shop.services.jpa.JpaProductService с параметрами [6]
+2024-02-15T12:51:23.256+01:00  INFO 42792 --- [http-nio-8080-exec-6] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод addProductToCart класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [30, 6] вернул ошибку Product with id [6] is inactive and cannot be retrieved
+2024-02-15T12:51:23.256+01:00  INFO 42792 --- [http-nio-8080-exec-6] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод addProductToCart класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [30, 6]
+2024-02-15T12:51:23.258+01:00 ERROR 42792 --- [http-nio-8080-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: de.aittr.g_31_2_shop.exception_handling.exceptions.InactiveProductException: Product with id [6] is inactive and cannot be retrieved] with root cause
+
+de.aittr.g_31_2_shop.exception_handling.exceptions.InactiveProductException: Product with id [6] is inactive and cannot be retrieved
+	at de.aittr.g_31_2_shop.services.jpa.JpaProductService.getActiveJpaProductById(JpaProductService.java:94) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703) ~[spring-aop-6.0.13.jar:6.0.13]
+	at de.aittr.g_31_2_shop.services.jpa.JpaProductService$$SpringCGLIB$$0.getActiveJpaProductById(<generated>) ~[classes/:na]
+	at de.aittr.g_31_2_shop.services.jpa.JpaCustomerService.addProductToCart(JpaCustomerService.java:151) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.13.jar:6.0.13]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391) ~[spring-tx-6.0.13.jar:6.0.13]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703) ~[spring-aop-6.0.13.jar:6.0.13]
+	at de.aittr.g_31_2_shop.services.jpa.JpaCustomerService$$SpringCGLIB$$0.addProductToCart(<generated>) ~[classes/:na]
+	at de.aittr.g_31_2_shop.controllers.CustomerController.addProductToCart(CustomerController.java:39) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:200) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
+
+2024-02-15T12:51:31.376+01:00  INFO 42792 --- [http-nio-8080-exec-8] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T12:51:31.381+01:00  INFO 42792 --- [http-nio-8080-exec-8] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin] вернул результат User{id=5, username='Admin', password='$2a$10$kLW6xDlU0Vxs9NevoFnlXOyim8b3vNoBK9k2l71Nq08TyRLE3ZEzm', roles=[Role{id=2, name='ROLE_CUSTOMER'}, Role{id=1, name='ROLE_ADMIN'}]}
+2024-02-15T12:51:31.382+01:00  INFO 42792 --- [http-nio-8080-exec-8] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T12:51:31.475+01:00  INFO 42792 --- [http-nio-8080-exec-8] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод addProductToCart класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [30, 5]
+2024-02-15T12:51:31.476+01:00  INFO 42792 --- [http-nio-8080-exec-8] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод getActiveJpaProductById класса de.aittr.g_31_2_shop.services.jpa.JpaProductService с параметрами [5]
+2024-02-15T12:51:31.478+01:00  INFO 42792 --- [http-nio-8080-exec-8] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод getActiveJpaProductById класса de.aittr.g_31_2_shop.services.jpa.JpaProductService с параметрами [5] вернул результат JpaProduct{id=5, name='Potato', price=70.0, isActive=true}
+2024-02-15T12:51:31.485+01:00  INFO 42792 --- [http-nio-8080-exec-8] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод getActiveJpaProductById класса de.aittr.g_31_2_shop.services.jpa.JpaProductService с параметрами [5]
+2024-02-15T12:51:31.491+01:00  INFO 42792 --- [http-nio-8080-exec-8] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод addProductToCart класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [30, 5] вернул ошибку Cannot invoke "de.aittr.g_31_2_shop.domain.jpa.JpaCustomer.isActive()" because "customer" is null
+2024-02-15T12:51:31.491+01:00  INFO 42792 --- [http-nio-8080-exec-8] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод addProductToCart класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [30, 5]
+2024-02-15T12:51:31.493+01:00 ERROR 42792 --- [http-nio-8080-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "de.aittr.g_31_2_shop.domain.jpa.JpaCustomer.isActive()" because "customer" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "de.aittr.g_31_2_shop.domain.jpa.JpaCustomer.isActive()" because "customer" is null
+	at de.aittr.g_31_2_shop.services.jpa.JpaCustomerService.addProductToCart(JpaCustomerService.java:158) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.13.jar:6.0.13]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391) ~[spring-tx-6.0.13.jar:6.0.13]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703) ~[spring-aop-6.0.13.jar:6.0.13]
+	at de.aittr.g_31_2_shop.services.jpa.JpaCustomerService$$SpringCGLIB$$0.addProductToCart(<generated>) ~[classes/:na]
+	at de.aittr.g_31_2_shop.controllers.CustomerController.addProductToCart(CustomerController.java:39) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:200) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
+
+2024-02-15T12:51:52.564+01:00  INFO 42792 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15T12:51:52.565+01:00  INFO 42792 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-15T12:51:52.571+01:00  INFO 42792 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-15T12:51:55.311+01:00  INFO 42809 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 20.0.2 with PID 42809 (/Users/admin/Documents/AIT_BACK/g_31_2_shop/target/classes started by admin in /Users/admin/Documents/AIT_BACK/g_31_2_shop)
+2024-02-15T12:51:55.313+01:00  INFO 42809 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-15T12:51:56.069+01:00  INFO 42809 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-15T12:51:56.152+01:00  INFO 42809 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 5 JPA repository interfaces.
+2024-02-15T12:51:57.148+01:00  INFO 42809 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-15T12:51:57.157+01:00  INFO 42809 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-15T12:51:57.158+01:00  INFO 42809 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-02-15T12:51:57.244+01:00  INFO 42809 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-15T12:51:57.244+01:00  INFO 42809 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1879 ms
+2024-02-15T12:51:57.537+01:00  INFO 42809 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-15T12:51:57.591+01:00  INFO 42809 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-02-15T12:51:57.594+01:00  INFO 42809 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-02-15T12:51:57.845+01:00  INFO 42809 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-15T12:51:57.870+01:00  INFO 42809 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-15T12:51:58.204+01:00  INFO 42809 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d6c4079
+2024-02-15T12:51:58.206+01:00  INFO 42809 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-15T12:51:59.213+01:00  INFO 42809 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-15T12:51:59.216+01:00  INFO 42809 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15T12:52:00.105+01:00  INFO 42809 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-15T12:52:00.657+01:00  WARN 42809 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-15T12:52:01.272+01:00  INFO 42809 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@38241615, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2b3ee95e, org.springframework.security.web.context.SecurityContextHolderFilter@1e3689e7, org.springframework.security.web.header.HeaderWriterFilter@506d7fed, org.springframework.security.web.authentication.logout.LogoutFilter@a6924ad, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5955568, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@655d5285, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c2273f6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@42fc744, org.springframework.security.web.access.ExceptionTranslationFilter@4d20cbb5, org.springframework.security.web.access.intercept.AuthorizationFilter@7695184b]
+2024-02-15T12:52:01.801+01:00  INFO 42809 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-15T12:52:01.811+01:00  INFO 42809 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 7.066 seconds (process running for 7.511)
+2024-02-15T12:52:30.677+01:00  INFO 42809 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-15T12:52:30.678+01:00  INFO 42809 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-15T12:52:30.680+01:00  INFO 42809 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-02-15T12:52:30.811+01:00  INFO 42809 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T12:52:30.977+01:00  INFO 42809 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin] вернул результат User{id=5, username='Admin', password='$2a$10$kLW6xDlU0Vxs9NevoFnlXOyim8b3vNoBK9k2l71Nq08TyRLE3ZEzm', roles=[Role{id=2, name='ROLE_CUSTOMER'}, Role{id=1, name='ROLE_ADMIN'}]}
+2024-02-15T12:52:30.982+01:00  INFO 42809 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T12:52:31.142+01:00  INFO 42809 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод addProductToCart класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [2, 5]
+2024-02-15T12:52:31.142+01:00  INFO 42809 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод getActiveJpaProductById класса de.aittr.g_31_2_shop.services.jpa.JpaProductService с параметрами [5]
+2024-02-15T12:52:31.159+01:00  INFO 42809 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод getActiveJpaProductById класса de.aittr.g_31_2_shop.services.jpa.JpaProductService с параметрами [5] вернул результат JpaProduct{id=5, name='Potato', price=70.0, isActive=true}
+2024-02-15T12:52:31.162+01:00  INFO 42809 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод getActiveJpaProductById класса de.aittr.g_31_2_shop.services.jpa.JpaProductService с параметрами [5]
+2024-02-15T12:52:31.172+01:00  INFO 42809 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод addProductToCart класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [2, 5] вернул результат null
+2024-02-15T12:52:31.172+01:00  INFO 42809 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод addProductToCart класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [2, 5]
+2024-02-15T12:53:50.227+01:00  INFO 42809 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T12:53:50.233+01:00  INFO 42809 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin] вернул результат User{id=5, username='Admin', password='$2a$10$kLW6xDlU0Vxs9NevoFnlXOyim8b3vNoBK9k2l71Nq08TyRLE3ZEzm', roles=[Role{id=2, name='ROLE_CUSTOMER'}, Role{id=1, name='ROLE_ADMIN'}]}
+2024-02-15T12:53:50.234+01:00  INFO 42809 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T12:53:50.326+01:00  INFO 42809 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод addProductToCart класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [39, 5]
+2024-02-15T12:53:50.327+01:00  INFO 42809 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод getActiveJpaProductById класса de.aittr.g_31_2_shop.services.jpa.JpaProductService с параметрами [5]
+2024-02-15T12:53:50.329+01:00  INFO 42809 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод getActiveJpaProductById класса de.aittr.g_31_2_shop.services.jpa.JpaProductService с параметрами [5] вернул результат JpaProduct{id=5, name='Potato', price=70.0, isActive=true}
+2024-02-15T12:53:50.329+01:00  INFO 42809 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод getActiveJpaProductById класса de.aittr.g_31_2_shop.services.jpa.JpaProductService с параметрами [5]
+2024-02-15T12:53:50.334+01:00  INFO 42809 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод addProductToCart класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [39, 5] вернул результат null
+2024-02-15T12:53:50.334+01:00  INFO 42809 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод addProductToCart класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [39, 5]
+2024-02-15T12:55:05.591+01:00  INFO 42809 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15T12:55:05.593+01:00  INFO 42809 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-15T12:55:05.600+01:00  INFO 42809 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-15T12:55:44.215+01:00  INFO 42872 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 20.0.2 with PID 42872 (/Users/admin/Documents/AIT_BACK/g_31_2_shop/target/classes started by admin in /Users/admin/Documents/AIT_BACK/g_31_2_shop)
+2024-02-15T12:55:44.217+01:00  INFO 42872 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-15T12:55:44.950+01:00  INFO 42872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-15T12:55:45.023+01:00  INFO 42872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 5 JPA repository interfaces.
+2024-02-15T12:55:46.097+01:00  INFO 42872 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-15T12:55:46.107+01:00  INFO 42872 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-15T12:55:46.107+01:00  INFO 42872 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-02-15T12:55:46.197+01:00  INFO 42872 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-15T12:55:46.198+01:00  INFO 42872 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1926 ms
+2024-02-15T12:55:46.559+01:00  INFO 42872 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-15T12:55:46.609+01:00  INFO 42872 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-02-15T12:55:46.611+01:00  INFO 42872 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-02-15T12:55:46.865+01:00  INFO 42872 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-15T12:55:46.887+01:00  INFO 42872 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-15T12:55:47.258+01:00  INFO 42872 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d6c4079
+2024-02-15T12:55:47.260+01:00  INFO 42872 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-15T12:55:48.422+01:00  INFO 42872 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-15T12:55:48.425+01:00  INFO 42872 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15T12:55:49.326+01:00  INFO 42872 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-15T12:55:50.037+01:00  WARN 42872 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-15T12:55:50.756+01:00  INFO 42872 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@36f1bd7e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1c2273f6, org.springframework.security.web.context.SecurityContextHolderFilter@27b7913, org.springframework.security.web.header.HeaderWriterFilter@4ff00844, org.springframework.security.web.authentication.logout.LogoutFilter@c3e5e3c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@259f0fdb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e8b0ab5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2719139f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@411e567e, org.springframework.security.web.access.ExceptionTranslationFilter@4a84beb7, org.springframework.security.web.access.intercept.AuthorizationFilter@36dbfa68]
+2024-02-15T12:55:51.623+01:00  INFO 42872 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-15T12:55:51.635+01:00  INFO 42872 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 7.964 seconds (process running for 8.4)
+2024-02-15T12:56:01.372+01:00  INFO 42872 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-15T12:56:01.372+01:00  INFO 42872 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-15T12:56:01.374+01:00  INFO 42872 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-02-15T12:56:38.990+01:00  INFO 42872 --- [http-nio-8080-exec-3] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T12:56:39.165+01:00  INFO 42872 --- [http-nio-8080-exec-3] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin] вернул результат User{id=5, username='Admin', password='$2a$10$kLW6xDlU0Vxs9NevoFnlXOyim8b3vNoBK9k2l71Nq08TyRLE3ZEzm', roles=[Role{id=2, name='ROLE_CUSTOMER'}, Role{id=1, name='ROLE_ADMIN'}]}
+2024-02-15T12:56:39.171+01:00  INFO 42872 --- [http-nio-8080-exec-3] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T12:56:39.295+01:00  INFO 42872 --- [http-nio-8080-exec-3] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод getAllActiveCustomers класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService
+2024-02-15T12:56:39.410+01:00  INFO 42872 --- [http-nio-8080-exec-3] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод getAllActiveCustomers класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService вернул результат [CustomerDto{id=1, name='Vanya', cart=CartDto{id=4, products=[ProductDto{id=1, name='Banana', price=120.0}, ProductDto{id=2, name='Apple', price=90.0}, ProductDto{id=3, name='Orange', price=210.0}]}}, CustomerDto{id=2, name='Petya', cart=CartDto{id=5, products=[ProductDto{id=3, name='Orange', price=210.0}, ProductDto{id=4, name='Carrot', price=60.0}, ProductDto{id=5, name='Potato', price=70.0}, ProductDto{id=5, name='Potato', price=70.0}]}}, CustomerDto{id=3, name='Sidor', cart=CartDto{id=6, products=[ProductDto{id=1, name='Banana', price=120.0}, ProductDto{id=3, name='Orange', price=210.0}, ProductDto{id=5, name='Potato', price=70.0}, ProductDto{id=7, name='Peach', price=170.0}]}}, CustomerDto{id=4, name='Vasya', cart=CartDto{id=7, products=[]}}, CustomerDto{id=6, name='Alex', cart=CartDto{id=9, products=[]}}, CustomerDto{id=7, name='Oleg', cart=CartDto{id=10, products=[]}}, CustomerDto{id=8, name='Ivan', cart=CartDto{id=11, products=[]}}, CustomerDto{id=9, name='Max', cart=CartDto{id=12, products=[]}}, CustomerDto{id=24, name='Mark', cart=CartDto{id=16, products=[]}}, CustomerDto{id=26, name='Markiz', cart=CartDto{id=17, products=[]}}, CustomerDto{id=27, name='Vasiliy', cart=CartDto{id=18, products=[]}}, CustomerDto{id=28, name='Vasiliy', cart=CartDto{id=19, products=[]}}, CustomerDto{id=32, name='Gleb', cart=CartDto{id=20, products=[]}}, CustomerDto{id=36, name='Ket', cart=CartDto{id=22, products=[]}}, CustomerDto{id=38, name='Mary', cart=CartDto{id=24, products=[]}}, CustomerDto{id=39, name='Mariana', cart=CartDto{id=25, products=[ProductDto{id=5, name='Potato', price=70.0}]}}]
+2024-02-15T12:56:39.415+01:00  INFO 42872 --- [http-nio-8080-exec-3] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод getAllActiveCustomers класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService
+2024-02-15T12:56:56.147+01:00  INFO 42872 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T12:56:56.153+01:00  INFO 42872 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin] вернул результат User{id=5, username='Admin', password='$2a$10$kLW6xDlU0Vxs9NevoFnlXOyim8b3vNoBK9k2l71Nq08TyRLE3ZEzm', roles=[Role{id=2, name='ROLE_CUSTOMER'}, Role{id=1, name='ROLE_ADMIN'}]}
+2024-02-15T12:56:56.153+01:00  INFO 42872 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T12:56:56.263+01:00  INFO 42872 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод getActiveCustomerById класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [2]
+2024-02-15T12:56:56.278+01:00  INFO 42872 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод getActiveCustomerById класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [2] вернул результат CustomerDto{id=2, name='Petya', cart=CartDto{id=5, products=[ProductDto{id=3, name='Orange', price=210.0}, ProductDto{id=4, name='Carrot', price=60.0}, ProductDto{id=5, name='Potato', price=70.0}, ProductDto{id=5, name='Potato', price=70.0}]}}
+2024-02-15T12:56:56.278+01:00  INFO 42872 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод getActiveCustomerById класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [2]
+2024-02-15T12:57:01.939+01:00  INFO 42872 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T12:57:01.950+01:00  INFO 42872 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin] вернул результат User{id=5, username='Admin', password='$2a$10$kLW6xDlU0Vxs9NevoFnlXOyim8b3vNoBK9k2l71Nq08TyRLE3ZEzm', roles=[Role{id=2, name='ROLE_CUSTOMER'}, Role{id=1, name='ROLE_ADMIN'}]}
+2024-02-15T12:57:01.950+01:00  INFO 42872 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T12:57:02.049+01:00  INFO 42872 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод getActiveCustomerById класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [25]
+2024-02-15T12:57:02.053+01:00  INFO 42872 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод getActiveCustomerById класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [25] вернул результат null
+2024-02-15T12:57:02.054+01:00  INFO 42872 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод getActiveCustomerById класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [25]
+2024-02-15T12:57:06.323+01:00  INFO 42872 --- [http-nio-8080-exec-6] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T12:57:06.334+01:00  INFO 42872 --- [http-nio-8080-exec-6] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin] вернул результат User{id=5, username='Admin', password='$2a$10$kLW6xDlU0Vxs9NevoFnlXOyim8b3vNoBK9k2l71Nq08TyRLE3ZEzm', roles=[Role{id=2, name='ROLE_CUSTOMER'}, Role{id=1, name='ROLE_ADMIN'}]}
+2024-02-15T12:57:06.334+01:00  INFO 42872 --- [http-nio-8080-exec-6] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Admin]
+2024-02-15T12:57:06.445+01:00  INFO 42872 --- [http-nio-8080-exec-6] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод getActiveCustomerById класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [2]
+2024-02-15T12:57:06.454+01:00  INFO 42872 --- [http-nio-8080-exec-6] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод getActiveCustomerById класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [2] вернул результат CustomerDto{id=2, name='Petya', cart=CartDto{id=5, products=[ProductDto{id=3, name='Orange', price=210.0}, ProductDto{id=4, name='Carrot', price=60.0}, ProductDto{id=5, name='Potato', price=70.0}, ProductDto{id=5, name='Potato', price=70.0}]}}
+2024-02-15T12:57:06.454+01:00  INFO 42872 --- [http-nio-8080-exec-6] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод getActiveCustomerById класса de.aittr.g_31_2_shop.services.jpa.JpaCustomerService с параметрами [2]
+2024-02-15T12:57:10.782+01:00  INFO 42872 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15T12:57:10.785+01:00  INFO 42872 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-15T12:57:10.792+01:00  INFO 42872 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-15T13:03:24.330+01:00  INFO 42930 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 20.0.2 with PID 42930 (/Users/admin/Documents/AIT_BACK/g_31_2_shop/target/classes started by admin in /Users/admin/Documents/AIT_BACK/g_31_2_shop)
+2024-02-15T13:03:24.333+01:00  INFO 42930 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-15T13:03:25.019+01:00  INFO 42930 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-15T13:03:25.096+01:00  INFO 42930 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 5 JPA repository interfaces.
+2024-02-15T13:03:26.066+01:00  INFO 42930 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-15T13:03:26.075+01:00  INFO 42930 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-15T13:03:26.076+01:00  INFO 42930 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-02-15T13:03:26.155+01:00  INFO 42930 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-15T13:03:26.156+01:00  INFO 42930 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1776 ms
+2024-02-15T13:03:26.439+01:00  INFO 42930 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-15T13:03:26.490+01:00  INFO 42930 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-02-15T13:03:26.492+01:00  INFO 42930 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-02-15T13:03:26.721+01:00  INFO 42930 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-15T13:03:26.746+01:00  INFO 42930 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-15T13:03:27.069+01:00  INFO 42930 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d6c4079
+2024-02-15T13:03:27.071+01:00  INFO 42930 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-15T13:03:28.090+01:00  INFO 42930 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-15T13:03:28.095+01:00  INFO 42930 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15T13:03:28.875+01:00  INFO 42930 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-15T13:03:29.419+01:00  WARN 42930 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-15T13:03:30.026+01:00  INFO 42930 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@22f756c5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@485a5c9, org.springframework.security.web.context.SecurityContextHolderFilter@74ec4df3, org.springframework.security.web.header.HeaderWriterFilter@4fbdee7a, org.springframework.security.web.authentication.logout.LogoutFilter@3f119b55, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1a507ea0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6bf2ecbb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5955568, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d397e87, org.springframework.security.web.access.ExceptionTranslationFilter@17e725fb, org.springframework.security.web.access.intercept.AuthorizationFilter@52288c65]
+2024-02-15T13:03:30.504+01:00  INFO 42930 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-15T13:03:30.514+01:00  INFO 42930 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 6.632 seconds (process running for 7.022)
+2024-02-15T13:03:54.045+01:00  INFO 42930 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-15T13:03:54.046+01:00  INFO 42930 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-15T13:03:54.048+01:00  INFO 42930 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-02-15T13:03:54.182+01:00  INFO 42930 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Petya]
+2024-02-15T13:03:54.337+01:00  INFO 42930 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Petya] вернул результат User{id=2, username='Petya', password='$2a$10$ioyabJDsZ6uCH.uh0T4eNuajW9yDX6ZtOz5Irpw4ys2Tugq7QQWSq', roles=[Role{id=2, name='ROLE_CUSTOMER'}]}
+2024-02-15T13:03:54.341+01:00  INFO 42930 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Petya]
+2024-02-15T13:03:54.472+01:00  INFO 42930 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : Вызван метод getAllActiveProducts.
+2024-02-15T13:03:54.472+01:00  INFO 42930 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод getAllActiveProducts класса de.aittr.g_31_2_shop.services.jpa.JpaProductService
+2024-02-15T13:03:54.493+01:00  INFO 42930 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод getAllActiveProducts класса de.aittr.g_31_2_shop.services.jpa.JpaProductService вернул результат [ProductDto{id=1, name='Banana', price=120.0}, ProductDto{id=2, name='Apple', price=90.0}, ProductDto{id=3, name='Orange', price=210.0}, ProductDto{id=4, name='Carrot', price=60.0}, ProductDto{id=5, name='Potato', price=70.0}, ProductDto{id=7, name='Peach', price=170.0}, ProductDto{id=8, name='Lemon', price=260.0}, ProductDto{id=13, name='Pear', price=115.0}, ProductDto{id=14, name='Chery', price=200.0}]
+2024-02-15T13:03:54.496+01:00  INFO 42930 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод getAllActiveProducts класса de.aittr.g_31_2_shop.services.jpa.JpaProductService
+2024-02-15T13:04:00.565+01:00  INFO 42930 --- [http-nio-8080-exec-3] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Petya]
+2024-02-15T13:04:00.571+01:00  INFO 42930 --- [http-nio-8080-exec-3] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Petya] вернул результат User{id=2, username='Petya', password='$2a$10$ioyabJDsZ6uCH.uh0T4eNuajW9yDX6ZtOz5Irpw4ys2Tugq7QQWSq', roles=[Role{id=2, name='ROLE_CUSTOMER'}]}
+2024-02-15T13:04:00.572+01:00  INFO 42930 --- [http-nio-8080-exec-3] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Petya]
+2024-02-15T13:04:00.677+01:00  INFO 42930 --- [http-nio-8080-exec-3] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод getActiveProductById класса de.aittr.g_31_2_shop.services.jpa.JpaProductService с параметрами [1]
+2024-02-15T13:04:00.689+01:00  INFO 42930 --- [http-nio-8080-exec-3] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод getActiveProductById класса de.aittr.g_31_2_shop.services.jpa.JpaProductService с параметрами [1] вернул результат ProductDto{id=1, name='Banana', price=120.0}
+2024-02-15T13:04:00.689+01:00  INFO 42930 --- [http-nio-8080-exec-3] d.a.g_31_2_shop.logging.AspectLogging    : Метод getActiveProductById вызыван с параметром 1 и успешно вернул рузультат: ProductDto{id=1, name='Banana', price=120.0}
+2024-02-15T13:04:00.689+01:00  INFO 42930 --- [http-nio-8080-exec-3] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод getActiveProductById класса de.aittr.g_31_2_shop.services.jpa.JpaProductService с параметрами [1]
+2024-02-15T13:04:13.620+01:00  INFO 42930 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Petya]
+2024-02-15T13:04:13.628+01:00  INFO 42930 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Petya] вернул результат User{id=2, username='Petya', password='$2a$10$ioyabJDsZ6uCH.uh0T4eNuajW9yDX6ZtOz5Irpw4ys2Tugq7QQWSq', roles=[Role{id=2, name='ROLE_CUSTOMER'}]}
+2024-02-15T13:04:13.629+01:00  INFO 42930 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Petya]
+2024-02-15T13:04:13.723+01:00  INFO 42930 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод getActiveProductById класса de.aittr.g_31_2_shop.services.jpa.JpaProductService с параметрами [6]
+2024-02-15T13:04:13.728+01:00  WARN 42930 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : Метод getActiveProductById вызыван с параметром 6 и выбросил ошибку: Product with id [6] is inactive and cannot be retrieved
+2024-02-15T13:04:13.728+01:00  INFO 42930 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод getActiveProductById класса de.aittr.g_31_2_shop.services.jpa.JpaProductService с параметрами [6] вернул ошибку Product with id [6] is inactive and cannot be retrieved
+2024-02-15T13:04:13.728+01:00  INFO 42930 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод getActiveProductById класса de.aittr.g_31_2_shop.services.jpa.JpaProductService с параметрами [6]
+2024-02-15T13:04:13.733+01:00 ERROR 42930 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: de.aittr.g_31_2_shop.exception_handling.exceptions.InactiveProductException: Product with id [6] is inactive and cannot be retrieved] with root cause
+
+de.aittr.g_31_2_shop.exception_handling.exceptions.InactiveProductException: Product with id [6] is inactive and cannot be retrieved
+	at de.aittr.g_31_2_shop.services.jpa.JpaProductService.getActiveJpaProductById(JpaProductService.java:94) ~[classes/:na]
+	at de.aittr.g_31_2_shop.services.jpa.JpaProductService.getActiveProductById(JpaProductService.java:113) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703) ~[spring-aop-6.0.13.jar:6.0.13]
+	at de.aittr.g_31_2_shop.services.jpa.JpaProductService$$SpringCGLIB$$0.getActiveProductById(<generated>) ~[classes/:na]
+	at de.aittr.g_31_2_shop.controllers.ProductController.getActiveProductById(ProductController.java:35) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:200) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
+
+2024-02-15T13:07:31.220+01:00  INFO 42930 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15T13:07:31.221+01:00  INFO 42930 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-15T13:07:31.230+01:00  INFO 42930 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-15T13:07:35.354+01:00  INFO 42973 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 20.0.2 with PID 42973 (/Users/admin/Documents/AIT_BACK/g_31_2_shop/target/classes started by admin in /Users/admin/Documents/AIT_BACK/g_31_2_shop)
+2024-02-15T13:07:35.356+01:00  INFO 42973 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-15T13:07:36.099+01:00  INFO 42973 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-15T13:07:36.174+01:00  INFO 42973 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 5 JPA repository interfaces.
+2024-02-15T13:07:37.161+01:00  INFO 42973 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-15T13:07:37.170+01:00  INFO 42973 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-15T13:07:37.170+01:00  INFO 42973 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-02-15T13:07:37.244+01:00  INFO 42973 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-15T13:07:37.244+01:00  INFO 42973 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1836 ms
+2024-02-15T13:07:37.529+01:00  INFO 42973 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-15T13:07:37.577+01:00  INFO 42973 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-02-15T13:07:37.580+01:00  INFO 42973 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-02-15T13:07:37.818+01:00  INFO 42973 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-15T13:07:37.852+01:00  INFO 42973 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-15T13:07:38.253+01:00  INFO 42973 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@166e5a6d
+2024-02-15T13:07:38.255+01:00  INFO 42973 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-15T13:07:39.302+01:00  INFO 42973 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-15T13:07:39.305+01:00  INFO 42973 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15T13:07:40.114+01:00  INFO 42973 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-15T13:07:40.672+01:00  WARN 42973 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-15T13:07:41.272+01:00  INFO 42973 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5fb58f15, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f8ac459, org.springframework.security.web.context.SecurityContextHolderFilter@299615a5, org.springframework.security.web.header.HeaderWriterFilter@2e778abb, org.springframework.security.web.authentication.logout.LogoutFilter@251db193, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3b4b2c03, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b407ac7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5578ed7e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d43c89f, org.springframework.security.web.access.ExceptionTranslationFilter@1b641c97, org.springframework.security.web.access.intercept.AuthorizationFilter@381d7c4c]
+2024-02-15T13:07:41.782+01:00  INFO 42973 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-15T13:07:41.793+01:00  INFO 42973 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 6.933 seconds (process running for 7.336)
+2024-02-15T13:07:44.882+01:00  INFO 42973 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-15T13:07:44.883+01:00  INFO 42973 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-15T13:07:44.884+01:00  INFO 42973 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-02-15T13:07:45.008+01:00  INFO 42973 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Petya]
+2024-02-15T13:07:45.156+01:00  INFO 42973 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Petya] вернул результат User{id=2, username='Petya', password='$2a$10$ioyabJDsZ6uCH.uh0T4eNuajW9yDX6ZtOz5Irpw4ys2Tugq7QQWSq', roles=[Role{id=2, name='ROLE_CUSTOMER'}]}
+2024-02-15T13:07:45.162+01:00  INFO 42973 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод loadUserByUsername класса de.aittr.g_31_2_shop.services.jpa.UserService с параметрами [Petya]
+2024-02-15T13:07:45.285+01:00  INFO 42973 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Вызван метод getActiveProductById класса de.aittr.g_31_2_shop.services.jpa.JpaProductService с параметрами [6]
+2024-02-15T13:07:45.306+01:00  WARN 42973 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : Метод getActiveProductById вызыван с параметром 6 и выбросил ошибку: Product with id [6] is inactive and cannot be retrieved
+2024-02-15T13:07:45.306+01:00  INFO 42973 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Метод getActiveProductById класса de.aittr.g_31_2_shop.services.jpa.JpaProductService с параметрами [6] вернул ошибку Product with id [6] is inactive and cannot be retrieved
+2024-02-15T13:07:45.306+01:00  INFO 42973 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : ** Завершил работу метод getActiveProductById класса de.aittr.g_31_2_shop.services.jpa.JpaProductService с параметрами [6]
+2024-02-15T13:08:05.106+01:00  INFO 42973 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15T13:08:05.108+01:00  INFO 42973 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-15T13:08:05.114+01:00  INFO 42973 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

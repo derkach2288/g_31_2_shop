@@ -59,7 +59,7 @@ public class JpaCart implements Cart {
     public List<Product> getProducts() {
         //TODO посмотреть как будет на практике, потом переделать
 //        logger.info("Вызван метод getProducts");
-        return new ArrayList<>(products);
+        return new ArrayList<>(products.stream().filter(p -> p.isActive()).toList());
     }
 
     @Override
@@ -149,7 +149,6 @@ public class JpaCart implements Cart {
         return "JpaCart{" +
                 "id=" + id +
                 ", products=" + products +
-                ", customer=" + customer +
                 '}';
     }
 }

@@ -47,6 +47,22 @@ public class JpaProductService implements ProductService {
         }
     }
 
+//    @Override
+//    public List<ProductDto> getAllActiveProducts() {
+//        Task task = new Task("Method getAllActiveProducts called");
+////        ScheduleExecutor.scheduleAndExecuteTask(task);
+//        // здесь будет JoinPoint, сюда будет внедрятся вспомолательный код
+//        return repository.findAll()
+//                .stream()
+//                .filter(p -> p.isActive())
+//                .map(p -> mappingService.mapProductEntityToDto(p))
+//                .toList();
+////        return repository.findAllByIsActiveTrue()
+////                .stream()
+////                .map(p -> mappingService.mapProductEntityToDto(p))
+////                .toList();
+//    }
+
     @Override
     public List<ProductDto> getAllActiveProducts() {
         Task task = new Task("Method getAllActiveProducts called");
@@ -63,6 +79,25 @@ public class JpaProductService implements ProductService {
 //                .toList();
     }
 
+
+
+    public Product getActiveJpaProductById(int id) {
+
+        Product product = repository.findById(id).orElse(null);
+
+        if (product == null) {
+            throw new ProductNotFoundException(String.format(
+                    "There is no product with id [%d] in the database", id));
+        }
+
+        if (!product.isActive()) {
+            throw new InactiveProductException(String.format(
+                    "Product with id [%d] is inactive and cannot be retrieved", id));
+        }
+
+        return product;
+    }
+
     @Override
     public ProductDto getActiveProductById(int id) {
 
@@ -75,14 +110,9 @@ public class JpaProductService implements ProductService {
 //        logger.error(String.format("Запрошен продукт с идендификатором %d.", id));
 
 
-        Product product = repository.findById(id).orElse(null);
+        Product product = getActiveJpaProductById(id);
 
-        if (product != null && product.isActive()) {
-            return mappingService.mapProductEntityToDto(product);
-        } else {
-            throw new ProductNotFoundException("Продукт с указанным идентификатором отстутсвует в базе данных");
-        }
-
+        return mappingService.mapProductEntityToDto(product);
 
 //        JpaProduct productById = repository.findByIdAndIsActiveTrue(id);
 

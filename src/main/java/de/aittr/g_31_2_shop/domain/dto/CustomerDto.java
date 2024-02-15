@@ -12,7 +12,10 @@ public class CustomerDto {
 
     private CartDto cart;
 
-//    public CustomerDto(int id, String name, CartDto cart) {
+    public CustomerDto() {
+    }
+
+    //    public CustomerDto(int id, String name, CartDto cart) {
 //        this.id = id;
 //        this.name = name;
 //        this.cart = cart;

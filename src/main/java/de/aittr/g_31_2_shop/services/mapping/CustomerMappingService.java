@@ -37,12 +37,10 @@ public class CustomerMappingService {
     }
 
     public JpaCustomer mapDtoToJpaCustomer(CustomerDto dto) {
-        int id = dto.getId();
         String name = dto.getName();
         int age = dto.getAge();
         String email = dto.getEmail();
-        JpaCart cart = cartMappingService.mapDtoToJpaCart(dto.getCart());
-        return new JpaCustomer(id, true, name, age, email, cart);
+        return new JpaCustomer(0, true, name, age, email, null);
 
     }
 }
